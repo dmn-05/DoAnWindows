@@ -64,6 +64,12 @@
     <Compile Include="Employee\frmProductManagement.Designer.cs">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\frmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\frmSale.Designer.cs">
+      <DependentUpon>frmSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAccountProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\frmProductManagement.resx">
       <DependentUpon>frmProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\frmSale.resx">
+      <DependentUpon>frmSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAccountProfile.resx">
       <DependentUpon>fAccountProfile.cs</DependentUpon>
