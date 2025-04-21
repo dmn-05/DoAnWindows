@@ -18,14 +18,14 @@ namespace PM_QL_BanHoa.Employee {
 		}
 
 		private void frmBillManagement_FormClosing(object sender, FormClosingEventArgs e) {
-			if (
-				MessageBox.Show(
-					"Bạn có muốn thoát chương trình?",
-					"Thông báo",
-					MessageBoxButtons.OKCancel,
-					MessageBoxIcon.Question
-				) != DialogResult.OK
-			) {
+			DialogResult result = MessageBox.Show(
+				"Bạn có muốn thoát chương trình?",
+				"Thông báo",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Question
+			);
+
+			if ( result == DialogResult.Yes ) {
 				e.Cancel = true;
 			}
 		}
@@ -138,7 +138,7 @@ namespace PM_QL_BanHoa.Employee {
 			int result = DataProviderBUS.Instance.ExecuteNonQuery(queryString, new object[] {
 					staffID,
 					customerID,
-					dateTime, 
+					dateTime,
 					status,
 					deliveryAddress,
 					total,
