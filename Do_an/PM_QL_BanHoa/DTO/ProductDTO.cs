@@ -12,5 +12,15 @@ namespace DTO {
     public double GiaNhap { get; set; }
     public double GiaXuat { get; set; }
     public int SoLuongTonKho { get; set; }
+
+    
+    public ProductDTO(int maSP = 0, string tenSP = "", double giaBanLe = 0, double giaNhap = 0, double giaXuat = 0, int soLuongTonKho = 0) {
+      MaSP = maSP;
+      TenSP = tenSP;
+      GiaBanLe = giaBanLe;
+      GiaNhap = giaNhap;
+      GiaXuat = giaXuat;
+      SoLuongTonKho = soLuongTonKho;
+    }
   }
 }

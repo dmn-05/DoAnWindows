@@ -27,56 +27,73 @@ namespace PM_QL_BanHoa {
     }
 
     private void btnPrint_Click(object sender, EventArgs e) {
+      printDoc.PrintPage -= printDoc_PrintPage; // Tránh đăng ký trùng nhiều lần
       printDoc.PrintPage += new PrintPageEventHandler(printDoc_PrintPage);
+      printDoc.DefaultPageSettings.Margins = new Margins(80, 80, 50, 50);
 
-      PrintDialog printDialog = new PrintDialog();
-      printDialog.Document = printDoc;
+      PrintPreviewDialog previewDialog = new PrintPreviewDialog();
+      previewDialog.Document = printDoc;
 
-      if (printDialog.ShowDialog() == DialogResult.OK) {
-        printDoc.Print();
-      }
+      // Tùy chỉnh form preview nếu muốn
+      previewDialog.WindowState = FormWindowState.Maximized;
+      previewDialog.ShowDialog();
     }
 
     private void printDoc_PrintPage(object sender, PrintPageEventArgs e) {
       Graphics g = e.Graphics;
-      Font font = new Font("Arial", 12);
+      Font font = new Font("Arial", 10);
       Font boldFont = new Font("Arial", 12, FontStyle.Bold);
-      int y = 100;
+      Font titleFont = new Font("Arial", 16, FontStyle.Bold);
+
+      int y = 80;
+      int leftMargin = 20;
+      int rightMargin = e.MarginBounds.Right;
+
+      // Vẽ tiêu đề căn giữa
+      string title = "HÓA ĐƠN BÁN HÀNG";
+      SizeF titleSize = g.MeasureString(title, titleFont);
+      float titleX = e.PageBounds.Width / 2 - titleSize.Width / 2;
+      g.DrawString(title, titleFont, Brushes.Black, titleX, 50);
 
       // Thông tin hóa đơn
-      g.DrawString("HÓA ĐƠN BÁN HÀNG", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new PointF(250, 50));
-      g.DrawString("Mã HĐ: " + txtMaHD.Text, font, Brushes.Black, 100, y); y += 25;
-      g.DrawString("Khách hàng: " + txtMaKH.Text, font, Brushes.Black, 100, y); y += 25;
-      g.DrawString("Nhân viên: " + txtMaNV.Text, font, Brushes.Black, 100, y); y += 25;
-      g.DrawString("Ngày lập: " + dateNgayLapHD.Value.ToShortDateString(), font, Brushes.Black, 100, y); y += 25;
-      g.DrawString("Địa chỉ giao: " + txtDiaChiGiao.Text, font, Brushes.Black, 100, y); y += 25;
+      g.DrawString("Mã HĐ: " + txtMaHD.Text, font, Brushes.Black, leftMargin, y); y += 25;
+      g.DrawString("Khách hàng: " + txtMaKH.Text, font, Brushes.Black, leftMargin, y); y += 25;
+      g.DrawString("Nhân viên: " + txtMaNV.Text, font, Brushes.Black, leftMargin, y); y += 25;
+      g.DrawString("Ngày lập: " + dateNgayLapHD.Value.ToShortDateString(), font, Brushes.Black, leftMargin, y); y += 25;
+      g.DrawString("Địa chỉ giao: " + txtDiaChiGiao.Text, font, Brushes.Black, leftMargin, y); y += 30;
 
-      y += 20;
-      g.DrawString("Chi tiết hóa đơn:", boldFont, Brushes.Black, 100, y); y += 30;
+      // Chi tiết hóa đơn
+      g.DrawString("Chi tiết hóa đơn:", boldFont, Brushes.Black, leftMargin, y); y += 30;
 
-      // Header bảng chi tiết
-      g.DrawString("Tên SP", boldFont, Brushes.Black, 100, y);
-      g.DrawString("SL", boldFont, Brushes.Black, 300, y);
-      g.DrawString("Đơn giá", boldFont, Brushes.Black, 350, y);
-      g.DrawString("Thành tiền", boldFont, Brushes.Black, 450, y);
+      // Căn vị trí các cột
+      int xTenSP = leftMargin;
+      int xSL = xTenSP + 120;
+      int xDonGia = xSL + 60;
+      int xThanhTien = xDonGia + 100;
+
+      // Header bảng
+      g.DrawString("Tên SP", boldFont, Brushes.Black, xTenSP, y);
+      g.DrawString("SL", boldFont, Brushes.Black, xSL, y);
+      g.DrawString("Đơn giá", boldFont, Brushes.Black, xDonGia, y);
+      g.DrawString("Thành tiền", boldFont, Brushes.Black, xThanhTien, y);
       y += 25;
 
-      // Lấy dữ liệu chi tiết từ DB
+      // Dữ liệu chi tiết hóa đơn
       DataTable chiTietHoaDon = DataProviderBUS.Instance.ExecuteQuery(
-          "SELECT TenSP, SoLuong, DonGia, (SoLuong * DonGia) AS ThanhTien FROM ChiTietHoaDon WHERE MaHD = @mahd ",
+          "SELECT TenSP, SoLuong, GiaBanLe, (SoLuong * GiaBanLe) AS ThanhTien FROM ChiTietHoaDon AS CTHD, SanPham AS SP WHERE CTHD.MaSP = SP.MaSP  AND MaHD = @mahd ",
           new object[] { txtMaHD.Text });
 
       foreach (DataRow row in chiTietHoaDon.Rows) {
-        g.DrawString(row["TenSP"].ToString(), font, Brushes.Black, 100, y);
-        g.DrawString(row["SoLuong"].ToString(), font, Brushes.Black, 300, y);
-        g.DrawString(string.Format("{0:N0}", row["DonGia"]), font, Brushes.Black, 350, y);
-        g.DrawString(string.Format("{0:N0}", row["ThanhTien"]), font, Brushes.Black, 450, y);
+        g.DrawString(row["TenSP"].ToString(), font, Brushes.Black, xTenSP, y);
+        g.DrawString(row["SoLuong"].ToString(), font, Brushes.Black, xSL, y);
+        g.DrawString(string.Format("{0:N0}", row["GiaBanLe"]), font, Brushes.Black, xDonGia, y);
+        g.DrawString(string.Format("{0:N0}", row["ThanhTien"]), font, Brushes.Black, xThanhTien, y);
         y += 25;
       }
-      y += 20;
-      g.DrawString("Tổng cộng: " + txtThanhTien.Text + " VNĐ", boldFont, Brushes.Black, 100, y);
-    }
 
+      y += 20;
+      g.DrawString("Tổng cộng: " + txtThanhTien.Text + " VNĐ", boldFont, Brushes.Black, xTenSP, y);
+    }
     private void fInvoice_Load(object sender, EventArgs e) {
       dgvInvoice.AutoGenerateColumns = false;
 
@@ -116,8 +133,7 @@ namespace PM_QL_BanHoa {
     private void btnDelete_Click(object sender, EventArgs e) {
       if (string.IsNullOrWhiteSpace(txtMaHD.Text)) {
         MessageBox.Show("Bạn chưa chọn!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-      }
-      else if(Xoa()){
+      } else if (Xoa()) {
         MessageBox.Show("Đã xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
       } else {
         MessageBox.Show("Đã xóa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

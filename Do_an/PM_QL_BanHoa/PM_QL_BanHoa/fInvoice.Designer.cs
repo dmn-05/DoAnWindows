@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInvoice));
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
       this.groupBox2 = new System.Windows.Forms.GroupBox();
       this.dateNgayLapHD = new System.Windows.Forms.DateTimePicker();
@@ -47,7 +46,6 @@
       this.label2 = new System.Windows.Forms.Label();
       this.txtMaHD = new System.Windows.Forms.TextBox();
       this.label1 = new System.Windows.Forms.Label();
-      this.btnDelete = new System.Windows.Forms.Button();
       this.btnPrint = new System.Windows.Forms.Button();
       this.groupBox1 = new System.Windows.Forms.GroupBox();
       this.dgvInvoice = new System.Windows.Forms.DataGridView();
@@ -86,7 +84,6 @@
       this.groupBox2.Controls.Add(this.label2);
       this.groupBox2.Controls.Add(this.txtMaHD);
       this.groupBox2.Controls.Add(this.label1);
-      this.groupBox2.Controls.Add(this.btnDelete);
       this.groupBox2.Controls.Add(this.btnPrint);
       this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.groupBox2.ForeColor = System.Drawing.Color.Blue;
@@ -226,26 +223,13 @@
       this.label1.TabIndex = 3;
       this.label1.Text = "MaHD:";
       // 
-      // btnDelete
-      // 
-      this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
-      this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
-      this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-      this.btnDelete.ForeColor = System.Drawing.Color.Black;
-      this.btnDelete.Location = new System.Drawing.Point(244, 606);
-      this.btnDelete.Name = "btnDelete";
-      this.btnDelete.Size = new System.Drawing.Size(100, 100);
-      this.btnDelete.TabIndex = 2;
-      this.btnDelete.UseVisualStyleBackColor = true;
-      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-      // 
       // btnPrint
       // 
       this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Left;
       this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
       this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
       this.btnPrint.ForeColor = System.Drawing.Color.Black;
-      this.btnPrint.Location = new System.Drawing.Point(55, 606);
+      this.btnPrint.Location = new System.Drawing.Point(154, 603);
       this.btnPrint.Name = "btnPrint";
       this.btnPrint.Size = new System.Drawing.Size(100, 100);
       this.btnPrint.TabIndex = 1;
@@ -284,14 +268,6 @@
             this.colDiaChiGiao,
             this.colThanhTien,
             this.colTrangThai});
-      dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-      dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-      dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-      dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-      dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-      dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-      this.dgvInvoice.DefaultCellStyle = dataGridViewCellStyle2;
       this.dgvInvoice.Location = new System.Drawing.Point(26, 46);
       this.dgvInvoice.Name = "dgvInvoice";
       this.dgvInvoice.RowHeadersWidth = 51;
@@ -441,6 +417,5 @@
     private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChiGiao;
     private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
     private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
-    private System.Windows.Forms.Button btnDelete;
   }
 }

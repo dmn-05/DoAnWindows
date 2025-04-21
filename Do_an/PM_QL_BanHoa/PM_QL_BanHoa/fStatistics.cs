@@ -23,8 +23,8 @@ namespace PM_QL_BanHoa {
 
       string query = "SELECT SUM(ThanhTien) as revenue FROM HoaDon WHERE NgayLapHoaDon >= @datefrom AND NgayLapHoaDon <= @dateto";
       DataTable data = DataProviderBUS.Instance.ExecuteQuery(query, new object[] { datefrom, dateto });
-      
-      
+
+
       if (dsDoanhThu.Tables.Contains("DoanhThu")) {
         dsDoanhThu.Tables["DoanhThu"].Clear();
         dsDoanhThu.Tables["DoanhThu"].Merge(data);
@@ -48,10 +48,10 @@ namespace PM_QL_BanHoa {
       string query = "Select SUM(ThanhTien) as 'revenue' From HoaDon";
       DataTable data = DataProviderBUS.Instance.ExecuteQuery(query);
       if (dsDoanhThu.Tables.Contains("DoanhThu")) {
-        dsDoanhThu.Tables["DoanhThu"].Clear(); 
+        dsDoanhThu.Tables["DoanhThu"].Clear();
         dsDoanhThu.Tables["DoanhThu"].Merge(data);
       } else {
-        data.TableName = "DoanhThu"; 
+        data.TableName = "DoanhThu";
         dsDoanhThu.Tables.Add(data);
       }
 

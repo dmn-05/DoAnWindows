@@ -42,7 +42,7 @@ CREATE TABLE HoaDon (
     NgayLapHoaDon DATETIME DEFAULT GETDATE(),
     TrangThai NVARCHAR(50) NOT NULL,
     DiaChiGiao NVARCHAR(255) NOT NULL,
-    ThanhTien DECIMAL(18,2) CHECK (ThanhTien >= 0) NOT NULL,
+    ThanhTien DECIMAL(18,2) Default 0 CHECK (ThanhTien >= 0),
     FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
     FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
 );
@@ -100,13 +100,13 @@ VALUES
     (N'Hoa Ly', 90000, 60000, 75000, 70),
     (N'Hoa Tulip', 150000, 110000, 130000, 30);
 GO
-INSERT INTO HoaDon (MaNV, MaKH, NgayLapHoaDon, TrangThai, DiaChiGiao, ThanhTien)
+INSERT INTO HoaDon (MaNV, MaKH, NgayLapHoaDon, TrangThai, DiaChiGiao)
 VALUES
-(1, 1, '2025-04-01', N'Đã giao', N'123 Lê Lợi, Q1, TP.HCM', 1500000),
-(2, 2, '2025-04-02', N'Chờ xử lý', N'456 Nguyễn Trãi, Q5, TP.HCM', 2250000),
-(3, 3, '2025-04-03', N'Đang giao', N'789 Cách Mạng Tháng 8, Q3, TP.HCM', 1750000),
-(1, 4, '2025-04-04', N'Đã hủy', N'10 Trần Hưng Đạo, Q1, TP.HCM', 0),
-(2, 5, '2025-04-05', N'Đã giao', N'98 Phan Đăng Lưu, Q.Phú Nhuận, TP.HCM', 2000000);
+(1, 1, '2025-04-01', N'Đã bán', N'123 Lê Lợi, Q1, TP.HCM'),
+(2, 2, '2025-04-02', N'Đã bán', N'456 Nguyễn Trãi, Q5, TP.HCM'),
+(3, 3, '2025-04-03', N'Đã hủy', N'789 Cách Mạng Tháng 8, Q3, TP.HCM'),
+(1, 4, '2025-04-04', N'Đã hủy', N'10 Trần Hưng Đạo, Q1, TP.HCM'),
+(2, 5, '2025-04-05', N'Đã bán', N'98 Phan Đăng Lưu, Q.Phú Nhuận, TP.HCM');
 GO
 INSERT INTO ChiTietHoaDon (MaHD, MaSP, SoLuong)
 VALUES 

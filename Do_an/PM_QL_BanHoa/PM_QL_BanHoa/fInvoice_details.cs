@@ -53,9 +53,10 @@ namespace PM_QL_BanHoa {
         dsCTHoaDon.Tables["CTHoaDon"].Clear();  // Xóa dữ liệu cũ
         dsCTHoaDon.Tables["CTHoaDon"].Merge(data);  // Gộp dữ liệu mới vào
       } else {
-        dsCTHoaDon.Tables.Add(data);  // Nếu chưa có, thêm bảng mới vào DataSet
-        dsCTHoaDon.Tables["CTHoaDon"].TableName = "CTHoaDon"; // Đặt lại tên bảng
+        data.TableName = "CTHoaDon";   // Đặt tên bảng trước khi add
+        dsCTHoaDon.Tables.Add(data);   // Rồi mới add vào DataSet
       }
+
 
       dgvInvoice_details.DataSource = dsCTHoaDon.Tables["CTHoaDon"]; // Cập nhật dữ liệu cho DataGridView
     }
