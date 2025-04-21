@@ -113,7 +113,7 @@ namespace PM_QL_BanHoa.Employee {
 
 		// Hàm dùng để cập nhật thông tin khách hàng.
 		bool updateCustomerInformation(int customerID, string customerName, string phoneNumber,
-															 string email, string address) {
+																	 string email, string address) {
 			string queryString =
 				"UPDATE KhachHang " +
 				"SET TenKH = @TenKH, SoDienThoai = @SoDienThoai, Email = @Email, DiaChi = @DiaChi " +
