@@ -76,9 +76,11 @@
 			this.grbInvoiceProcess.Controls.Add(this.label3);
 			this.grbInvoiceProcess.Controls.Add(this.label2);
 			this.grbInvoiceProcess.Controls.Add(this.label1);
-			this.grbInvoiceProcess.Location = new System.Drawing.Point(916, 6);
+			this.grbInvoiceProcess.Location = new System.Drawing.Point(1030, 8);
+			this.grbInvoiceProcess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.grbInvoiceProcess.Name = "grbInvoiceProcess";
-			this.grbInvoiceProcess.Size = new System.Drawing.Size(562, 697);
+			this.grbInvoiceProcess.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.grbInvoiceProcess.Size = new System.Drawing.Size(632, 871);
 			this.grbInvoiceProcess.TabIndex = 1;
 			this.grbInvoiceProcess.TabStop = false;
 			this.grbInvoiceProcess.Text = "Xử lý hóa đơn";
@@ -87,9 +89,10 @@
 			// 
 			this.btnUpdateInvoice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateInvoice.BackgroundImage")));
 			this.btnUpdateInvoice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnUpdateInvoice.Location = new System.Drawing.Point(349, 569);
+			this.btnUpdateInvoice.Location = new System.Drawing.Point(393, 711);
+			this.btnUpdateInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnUpdateInvoice.Name = "btnUpdateInvoice";
-			this.btnUpdateInvoice.Size = new System.Drawing.Size(75, 75);
+			this.btnUpdateInvoice.Size = new System.Drawing.Size(84, 94);
 			this.btnUpdateInvoice.TabIndex = 15;
 			this.btnUpdateInvoice.UseVisualStyleBackColor = true;
 			this.btnUpdateInvoice.Click += new System.EventHandler(this.btnUpdateInvoice_Click);
@@ -98,71 +101,79 @@
 			// 
 			this.btnAddInvoice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddInvoice.BackgroundImage")));
 			this.btnAddInvoice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnAddInvoice.Location = new System.Drawing.Point(147, 569);
+			this.btnAddInvoice.Location = new System.Drawing.Point(165, 711);
+			this.btnAddInvoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnAddInvoice.Name = "btnAddInvoice";
-			this.btnAddInvoice.Size = new System.Drawing.Size(75, 75);
+			this.btnAddInvoice.Size = new System.Drawing.Size(84, 94);
 			this.btnAddInvoice.TabIndex = 14;
 			this.btnAddInvoice.UseVisualStyleBackColor = true;
 			this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
 			// 
 			// dateTimePicker
 			// 
-			this.dateTimePicker.Location = new System.Drawing.Point(258, 237);
+			this.dateTimePicker.Location = new System.Drawing.Point(290, 296);
+			this.dateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.dateTimePicker.Name = "dateTimePicker";
-			this.dateTimePicker.Size = new System.Drawing.Size(250, 22);
+			this.dateTimePicker.Size = new System.Drawing.Size(281, 26);
 			this.dateTimePicker.TabIndex = 13;
 			// 
 			// txtStatus
 			// 
-			this.txtStatus.Location = new System.Drawing.Point(258, 302);
+			this.txtStatus.Location = new System.Drawing.Point(290, 378);
+			this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtStatus.Name = "txtStatus";
-			this.txtStatus.Size = new System.Drawing.Size(250, 22);
+			this.txtStatus.Size = new System.Drawing.Size(281, 26);
 			this.txtStatus.TabIndex = 12;
 			// 
 			// txtTotal
 			// 
-			this.txtTotal.Location = new System.Drawing.Point(258, 500);
+			this.txtTotal.Location = new System.Drawing.Point(290, 625);
+			this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtTotal.Name = "txtTotal";
-			this.txtTotal.Size = new System.Drawing.Size(250, 22);
+			this.txtTotal.Size = new System.Drawing.Size(281, 26);
 			this.txtTotal.TabIndex = 11;
 			// 
 			// txtDeliveryAddress
 			// 
-			this.txtDeliveryAddress.Location = new System.Drawing.Point(258, 357);
+			this.txtDeliveryAddress.Location = new System.Drawing.Point(290, 446);
+			this.txtDeliveryAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtDeliveryAddress.Multiline = true;
 			this.txtDeliveryAddress.Name = "txtDeliveryAddress";
-			this.txtDeliveryAddress.Size = new System.Drawing.Size(250, 100);
+			this.txtDeliveryAddress.Size = new System.Drawing.Size(281, 124);
 			this.txtDeliveryAddress.TabIndex = 10;
 			// 
 			// txtCustomerID
 			// 
-			this.txtCustomerID.Location = new System.Drawing.Point(258, 173);
+			this.txtCustomerID.Location = new System.Drawing.Point(290, 216);
+			this.txtCustomerID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtCustomerID.Name = "txtCustomerID";
-			this.txtCustomerID.Size = new System.Drawing.Size(250, 22);
+			this.txtCustomerID.Size = new System.Drawing.Size(281, 26);
 			this.txtCustomerID.TabIndex = 9;
 			// 
 			// txtStaffID
 			// 
-			this.txtStaffID.Location = new System.Drawing.Point(258, 111);
+			this.txtStaffID.Location = new System.Drawing.Point(290, 139);
+			this.txtStaffID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtStaffID.Name = "txtStaffID";
-			this.txtStaffID.Size = new System.Drawing.Size(250, 22);
+			this.txtStaffID.Size = new System.Drawing.Size(281, 26);
 			this.txtStaffID.TabIndex = 8;
 			// 
 			// txtInvoiceID
 			// 
-			this.txtInvoiceID.Location = new System.Drawing.Point(258, 47);
+			this.txtInvoiceID.Location = new System.Drawing.Point(290, 59);
+			this.txtInvoiceID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtInvoiceID.Name = "txtInvoiceID";
 			this.txtInvoiceID.ReadOnly = true;
-			this.txtInvoiceID.Size = new System.Drawing.Size(250, 22);
+			this.txtInvoiceID.Size = new System.Drawing.Size(281, 26);
 			this.txtInvoiceID.TabIndex = 7;
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(75, 298);
+			this.label7.Location = new System.Drawing.Point(84, 372);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(100, 25);
+			this.label7.Size = new System.Drawing.Size(121, 29);
 			this.label7.TabIndex = 6;
 			this.label7.Text = "Trạng thái";
 			// 
@@ -170,9 +181,9 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(75, 496);
+			this.label6.Location = new System.Drawing.Point(84, 620);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(105, 25);
+			this.label6.Size = new System.Drawing.Size(126, 29);
 			this.label6.TabIndex = 5;
 			this.label6.Text = "Thành tiền";
 			// 
@@ -180,9 +191,9 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(78, 391);
+			this.label5.Location = new System.Drawing.Point(88, 489);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(113, 25);
+			this.label5.Size = new System.Drawing.Size(139, 29);
 			this.label5.TabIndex = 4;
 			this.label5.Text = "Địa chỉ giao";
 			// 
@@ -190,9 +201,9 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(75, 234);
+			this.label4.Location = new System.Drawing.Point(84, 292);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(165, 25);
+			this.label4.Size = new System.Drawing.Size(201, 29);
 			this.label4.TabIndex = 3;
 			this.label4.Text = "Ngày lập hóa đơn";
 			// 
@@ -200,9 +211,9 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(75, 170);
+			this.label3.Location = new System.Drawing.Point(84, 212);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(147, 25);
+			this.label3.Size = new System.Drawing.Size(174, 29);
 			this.label3.TabIndex = 2;
 			this.label3.Text = "Mã khách hàng";
 			// 
@@ -210,9 +221,9 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(75, 107);
+			this.label2.Location = new System.Drawing.Point(84, 134);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(130, 25);
+			this.label2.Size = new System.Drawing.Size(154, 29);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Mã nhân viên";
 			// 
@@ -220,9 +231,9 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(75, 47);
+			this.label1.Location = new System.Drawing.Point(84, 59);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(116, 25);
+			this.label1.Size = new System.Drawing.Size(139, 29);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Mã hóa đơn";
 			// 
@@ -231,13 +242,14 @@
 			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			//this.panel1.BackgroundImage = global::PM_QL_BanHoa.Properties.Resources.background;
+			this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.panel1.Controls.Add(this.dataGridView);
 			this.panel1.Controls.Add(this.grbInvoiceProcess);
-			this.panel1.Location = new System.Drawing.Point(12, 11);
+			this.panel1.Location = new System.Drawing.Point(14, 14);
 			this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1481, 703);
+			this.panel1.Size = new System.Drawing.Size(1666, 879);
 			this.panel1.TabIndex = 0;
 			// 
 			// dataGridView
@@ -256,13 +268,13 @@
             this.colStatus,
             this.colAddressDelivery,
             this.colTotal});
-			this.dataGridView.Location = new System.Drawing.Point(3, 5);
+			this.dataGridView.Location = new System.Drawing.Point(3, 6);
 			this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.dataGridView.Name = "dataGridView";
 			this.dataGridView.RowHeadersWidth = 62;
 			this.dataGridView.RowTemplate.Height = 28;
 			this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataGridView.Size = new System.Drawing.Size(907, 698);
+			this.dataGridView.Size = new System.Drawing.Size(1020, 872);
 			this.dataGridView.TabIndex = 0;
 			this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
 			// 
@@ -317,9 +329,9 @@
 			// 
 			// frmBillManagement
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1502, 723);
+			this.ClientSize = new System.Drawing.Size(1690, 904);
 			this.Controls.Add(this.panel1);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "frmBillManagement";

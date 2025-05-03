@@ -75,7 +75,6 @@ namespace PM_QL_BanHoa.Employee {
 		private void btnAddCustomer_Click(object sender, EventArgs e) {
 			try {
 				// Lấy dữ liệu ra từ các TextBox.
-				int customerID = int.Parse(txtCustomerID.Text.ToString());
 				string customerName = txtCustomerName.Text.ToString();
 				string phoneNumber = txtPhoneNumber.Text.ToString();
 				string email = txtEmail.Text.ToString();
@@ -169,6 +168,29 @@ namespace PM_QL_BanHoa.Employee {
 					MessageBoxIcon.Error
 				);
 			}
+		}
+
+		void searchCustomer(string customerName) {
+			try {
+				string queryString = "SELECT * FROM KhachHang WHERE TenKH LIKE @TenKH";
+				object[] parameters = new object[] {
+					'%' + customerName + '%'
+				};
+				DataTable dataTable = DataProviderBUS.Instance.ExecuteQuery(queryString, parameters);
+				dataGridView.DataSource = dataTable;
+			} catch (Exception exception) {
+				MessageBox.Show(
+					$"{exception.Message}",
+					"Cảnh báo!",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Error
+				);
+			}
+		}
+
+		private void btnSearch_Click(object sender, EventArgs e) {
+			string customerName = txtSearchCustomerName.Text.Trim();
+			searchCustomer(customerName);
 		}
 	}
 }

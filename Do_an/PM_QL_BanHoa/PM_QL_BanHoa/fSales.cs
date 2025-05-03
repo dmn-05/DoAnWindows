@@ -50,6 +50,7 @@ namespace PM_QL_BanHoa {
       toolTip.SetToolTip(this.ptbBillManagement, "Quản lý hóa đơn");
       toolTip.SetToolTip(this.ptbCustomerManagement, "Quản lý khách hàng");
       toolTip.SetToolTip(this.ptbProductManagement, "Quản lý sản phẩm");
+      toolTip.SetToolTip(this.ptbSaleProcessing, "Bán hàng");
     }
 
 		private void ptbSaleProcessing_Click(object sender, EventArgs e) {
