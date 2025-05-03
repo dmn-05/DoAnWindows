@@ -26,7 +26,7 @@ namespace PM_QL_BanHoa {
 
     private void btnAdd_Click(object sender, EventArgs e) {
       if (string.IsNullOrWhiteSpace(cbMaSP.Text) || string.IsNullOrWhiteSpace(txtSoLuong.Text)) {
-        MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+        MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông Báo", MessageBoxButtons.OK);
         return;
       }
       Export_goodsDTO HoaDon = new Export_goodsDTO();
@@ -62,7 +62,7 @@ namespace PM_QL_BanHoa {
       }
       dgvExport_goods_goods.DataSource = dsHoaDonXuat.Tables[0]; // Đặt trực tiếp DataTable vào DataGridView
     }
-   
+
     private void LoadMaSP() {
       string query = "SELECT MaSP FROM SanPham";
 

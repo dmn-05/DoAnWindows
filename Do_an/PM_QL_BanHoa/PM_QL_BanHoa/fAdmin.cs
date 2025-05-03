@@ -35,7 +35,7 @@ namespace PM_QL_BanHoa {
     }
 
     private void fAdmin_FormClosing(object sender, FormClosingEventArgs e) {
-      if (MessageBox.Show("Bạn có muốn thoát chương trình", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK) {
+      if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK) {
         e.Cancel = true;
       }
       
@@ -109,5 +109,13 @@ namespace PM_QL_BanHoa {
       f.ShowDialog();
       this.Show();
     }
-  }
+
+    private void btnSales_Click(object sender, EventArgs e)
+    {
+        fSales f = new fSales();
+        this.Hide();
+        f.ShowDialog();
+        this.Show();
+    }
+    }
 }

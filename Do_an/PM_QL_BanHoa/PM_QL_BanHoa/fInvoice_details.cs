@@ -22,7 +22,7 @@ namespace PM_QL_BanHoa {
       LoadDSHD();
     }
     private void LoadDSHD() {
-      string query = "Select * From ChiTietHoaDon";
+      string query = "Select * From ChiTietHoaDon as CTHD, HoaDon as HD Where CTHD.MaHD = HD.MaHD AND TrangThai = 1";
       DataTable data = DataProviderBUS.Instance.ExecuteQuery(query);
       if (dsCTHoaDon.Tables.Count > 0) {
         dsCTHoaDon.Tables[0].Clear();
@@ -45,7 +45,7 @@ namespace PM_QL_BanHoa {
       }
 
       string name = txtMa.Text.Trim();
-      string query = "SELECT * FROM ChiTietHoaDon WHERE MaHD LIKE @MaHD";
+      string query = "SELECT * From ChiTietHoaDon as CTHD, HoaDon as HD Where CTHD.MaHD = HD.MaHD AND TrangThai = 1 AND CTHD.MaHD LIKE @MaHD";
 
       DataTable data = DataProviderBUS.Instance.ExecuteQuery(query, new object[] { "%" + name + "%" });
 

@@ -1,37 +1,33 @@
-﻿namespace PM_QL_BanHoa
-{
-    partial class fInvoice
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+﻿namespace PM_QL_BanHoa {
+  partial class fInvoice {
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing) {
+      if (disposing && (components != null)) {
+        components.Dispose();
+      }
+      base.Dispose(disposing);
+    }
 
-        #region Windows Form Designer generated code
+    #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent() {
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInvoice));
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
       this.groupBox2 = new System.Windows.Forms.GroupBox();
+      this.btnEdit = new System.Windows.Forms.Button();
+      this.btnDelete = new System.Windows.Forms.Button();
       this.dateNgayLapHD = new System.Windows.Forms.DateTimePicker();
       this.label5 = new System.Windows.Forms.Label();
       this.txtDiaChiGiao = new System.Windows.Forms.TextBox();
@@ -49,6 +45,9 @@
       this.label1 = new System.Windows.Forms.Label();
       this.btnPrint = new System.Windows.Forms.Button();
       this.groupBox1 = new System.Windows.Forms.GroupBox();
+      this.btnSearch = new System.Windows.Forms.Button();
+      this.lblUserName = new System.Windows.Forms.Label();
+      this.txtMa = new System.Windows.Forms.TextBox();
       this.dgvInvoice = new System.Windows.Forms.DataGridView();
       this.colMaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.colMaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,10 +65,12 @@
       // 
       // groupBox2
       // 
-      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+      | System.Windows.Forms.AnchorStyles.Left)
+      | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+      this.groupBox2.Controls.Add(this.btnEdit);
+      this.groupBox2.Controls.Add(this.btnDelete);
       this.groupBox2.Controls.Add(this.dateNgayLapHD);
       this.groupBox2.Controls.Add(this.label5);
       this.groupBox2.Controls.Add(this.txtDiaChiGiao);
@@ -95,6 +96,32 @@
       this.groupBox2.TabStop = false;
       this.groupBox2.Text = "Xử Lý ";
       // 
+      // btnEdit
+      // 
+      this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+      this.btnEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.BackgroundImage")));
+      this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btnEdit.ForeColor = System.Drawing.Color.Black;
+      this.btnEdit.Location = new System.Drawing.Point(274, 603);
+      this.btnEdit.Name = "btnEdit";
+      this.btnEdit.Size = new System.Drawing.Size(100, 100);
+      this.btnEdit.TabIndex = 22;
+      this.btnEdit.UseVisualStyleBackColor = true;
+      this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+      // 
+      // btnDelete
+      // 
+      this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
+      this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
+      this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btnDelete.ForeColor = System.Drawing.Color.Black;
+      this.btnDelete.Location = new System.Drawing.Point(153, 603);
+      this.btnDelete.Name = "btnDelete";
+      this.btnDelete.Size = new System.Drawing.Size(100, 100);
+      this.btnDelete.TabIndex = 21;
+      this.btnDelete.UseVisualStyleBackColor = true;
+      this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+      // 
       // dateNgayLapHD
       // 
       this.dateNgayLapHD.CustomFormat = "dd/MM/yyyy";
@@ -119,7 +146,6 @@
       this.txtDiaChiGiao.Location = new System.Drawing.Point(145, 307);
       this.txtDiaChiGiao.Multiline = true;
       this.txtDiaChiGiao.Name = "txtDiaChiGiao";
-      this.txtDiaChiGiao.ReadOnly = true;
       this.txtDiaChiGiao.Size = new System.Drawing.Size(229, 133);
       this.txtDiaChiGiao.TabIndex = 18;
       // 
@@ -169,7 +195,6 @@
       // 
       this.txtMaKH.Location = new System.Drawing.Point(145, 114);
       this.txtMaKH.Name = "txtMaKH";
-      this.txtMaKH.ReadOnly = true;
       this.txtMaKH.Size = new System.Drawing.Size(229, 30);
       this.txtMaKH.TabIndex = 10;
       // 
@@ -186,7 +211,6 @@
       // 
       this.txtMaNV.Location = new System.Drawing.Point(145, 174);
       this.txtMaNV.Name = "txtMaNV";
-      this.txtMaNV.ReadOnly = true;
       this.txtMaNV.Size = new System.Drawing.Size(229, 30);
       this.txtMaNV.TabIndex = 8;
       // 
@@ -212,6 +236,7 @@
       // 
       this.txtMaHD.Location = new System.Drawing.Point(145, 56);
       this.txtMaHD.Name = "txtMaHD";
+      this.txtMaHD.ReadOnly = true;
       this.txtMaHD.Size = new System.Drawing.Size(229, 30);
       this.txtMaHD.TabIndex = 4;
       // 
@@ -230,7 +255,7 @@
       this.btnPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.BackgroundImage")));
       this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
       this.btnPrint.ForeColor = System.Drawing.Color.Black;
-      this.btnPrint.Location = new System.Drawing.Point(154, 603);
+      this.btnPrint.Location = new System.Drawing.Point(32, 603);
       this.btnPrint.Name = "btnPrint";
       this.btnPrint.Size = new System.Drawing.Size(100, 100);
       this.btnPrint.TabIndex = 1;
@@ -239,10 +264,13 @@
       // 
       // groupBox1
       // 
-      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+      | System.Windows.Forms.AnchorStyles.Left)
+      | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+      this.groupBox1.Controls.Add(this.btnSearch);
+      this.groupBox1.Controls.Add(this.lblUserName);
+      this.groupBox1.Controls.Add(this.txtMa);
       this.groupBox1.Controls.Add(this.dgvInvoice);
       this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.groupBox1.ForeColor = System.Drawing.Color.Blue;
@@ -253,11 +281,47 @@
       this.groupBox1.TabStop = false;
       this.groupBox1.Text = "Quản Lý Hóa Đơn";
       // 
+      // btnSearch
+      // 
+      this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+      this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btnSearch.ForeColor = System.Drawing.Color.Blue;
+      this.btnSearch.Location = new System.Drawing.Point(750, 28);
+      this.btnSearch.Name = "btnSearch";
+      this.btnSearch.Size = new System.Drawing.Size(37, 37);
+      this.btnSearch.TabIndex = 30;
+      this.btnSearch.UseVisualStyleBackColor = true;
+      this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+      // 
+      // lblUserName
+      // 
+      this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.lblUserName.AutoSize = true;
+      this.lblUserName.BackColor = System.Drawing.Color.Transparent;
+      this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblUserName.ForeColor = System.Drawing.Color.White;
+      this.lblUserName.Location = new System.Drawing.Point(351, 32);
+      this.lblUserName.Name = "lblUserName";
+      this.lblUserName.Size = new System.Drawing.Size(136, 25);
+      this.lblUserName.TabIndex = 29;
+      this.lblUserName.Text = "Nhập MaHD:";
+      // 
+      // txtMa
+      // 
+      this.txtMa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtMa.Location = new System.Drawing.Point(503, 33);
+      this.txtMa.Multiline = true;
+      this.txtMa.Name = "txtMa";
+      this.txtMa.Size = new System.Drawing.Size(228, 28);
+      this.txtMa.TabIndex = 28;
+      // 
       // dgvInvoice
       // 
-      this.dgvInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+      this.dgvInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+      | System.Windows.Forms.AnchorStyles.Left)
+      | System.Windows.Forms.AnchorStyles.Right)));
       this.dgvInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.dgvInvoice.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
       this.dgvInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -269,20 +333,12 @@
             this.colDiaChiGiao,
             this.colThanhTien,
             this.colTrangThai});
-      dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-      dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-      dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-      dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-      dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-      dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-      this.dgvInvoice.DefaultCellStyle = dataGridViewCellStyle2;
-      this.dgvInvoice.Location = new System.Drawing.Point(26, 46);
+      this.dgvInvoice.Location = new System.Drawing.Point(32, 85);
       this.dgvInvoice.Name = "dgvInvoice";
       this.dgvInvoice.RowHeadersWidth = 51;
       this.dgvInvoice.RowTemplate.Height = 24;
       this.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-      this.dgvInvoice.Size = new System.Drawing.Size(786, 657);
+      this.dgvInvoice.Size = new System.Drawing.Size(786, 632);
       this.dgvInvoice.TabIndex = 0;
       this.dgvInvoice.SelectionChanged += new System.EventHandler(this.dgvInvoice_SelectionChanged);
       // 
@@ -391,11 +447,12 @@
       this.groupBox2.ResumeLayout(false);
       this.groupBox2.PerformLayout();
       this.groupBox1.ResumeLayout(false);
+      this.groupBox1.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgvInvoice)).EndInit();
       this.tableLayoutPanel1.ResumeLayout(false);
       this.ResumeLayout(false);
 
-        }
+    }
 
     #endregion
 
@@ -426,5 +483,10 @@
     private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChiGiao;
     private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
     private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+    private System.Windows.Forms.Button btnSearch;
+    private System.Windows.Forms.Label lblUserName;
+    private System.Windows.Forms.TextBox txtMa;
+    private System.Windows.Forms.Button btnEdit;
+    private System.Windows.Forms.Button btnDelete;
   }
 }

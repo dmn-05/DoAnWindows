@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace PM_QL_BanHoa {
   public partial class fProduct : Form {
-    string strKetNoi = "Data Source=.\\SQLEXPRESS01;Initial Catalog=QuanLyBanHang;Integrated Security=True";
+    string strKetNoi = "Data Source=.;Initial Catalog=QuanLyBanHang;Integrated Security=True";
     DataSet dsSanPham = new DataSet();
     SqlDataAdapter daSP;
     public fProduct() {
