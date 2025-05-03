@@ -29,9 +29,9 @@ namespace PM_QL_BanHoa {
     private void btnPrint_Click(object sender, EventArgs e) {
       printDoc.PrintPage -= printDoc_PrintPage; // Tránh đăng ký trùng nhiều lần
       printDoc.PrintPage += new PrintPageEventHandler(printDoc_PrintPage);
-            PaperSize customSize = new PaperSize("Custom", 400, 583);
-            printDoc.DefaultPageSettings.PaperSize = customSize;
-            printDoc.DefaultPageSettings.Margins = new Margins(80, 80, 50, 50);
+      PaperSize customSize = new PaperSize("Custom", 400, 583);
+      printDoc.DefaultPageSettings.PaperSize = customSize;
+      printDoc.DefaultPageSettings.Margins = new Margins(80, 80, 50, 50);
 
       PrintPreviewDialog previewDialog = new PrintPreviewDialog();
       previewDialog.Document = printDoc;
@@ -132,69 +132,55 @@ namespace PM_QL_BanHoa {
       }
     }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMaHD.Text))
-            {
-                MessageBox.Show("Bạn chưa chọn!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (Xoa())
-            {
-                MessageBox.Show("Đã xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Đã xóa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            LoadDSHD();
-        }
-        private bool Xoa()
-        {
-            string query = "Update HoaDon Set TrangThai = 0 Where MaHD = @MaHD";
-            if (DataProviderBUS.Instance.ExecuteNonQuery(query, new Object[] { txtMaHD.Text }) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+    private void btnDelete_Click(object sender, EventArgs e) {
+      if (string.IsNullOrWhiteSpace(txtMaHD.Text)) {
+        MessageBox.Show("Bạn chưa chọn!", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+      } else if (Xoa()) {
+        MessageBox.Show("Đã xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+      } else {
+        MessageBox.Show("Đã xóa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+      }
+      LoadDSHD();
+    }
+    private bool Xoa() {
+      string query = "Update HoaDon Set TrangThai = 0 Where MaHD = @MaHD";
+      if (DataProviderBUS.Instance.ExecuteNonQuery(query, new Object[] { txtMaHD.Text }) > 0) {
+        return true;
+      }
+      return false;
+    }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtMa.Text))
-            {
-                LoadDSHD();
-                return;
-            }
+    private void btnSearch_Click(object sender, EventArgs e) {
+      if (string.IsNullOrWhiteSpace(txtMa.Text)) {
+        LoadDSHD();
+        return;
+      }
 
-            string name = txtMa.Text.Trim();
-            string query = "SELECT * FROM HoaDon WHERE MaHD LIKE @MaHD AND TrangThai = 1";
+      string name = txtMa.Text.Trim();
+      string query = "SELECT * FROM HoaDon WHERE MaHD LIKE @MaHD AND TrangThai = 1";
 
-            DataTable data = DataProviderBUS.Instance.ExecuteQuery(query, new object[] { "%" + name + "%" });
+      DataTable data = DataProviderBUS.Instance.ExecuteQuery(query, new object[] { "%" + name + "%" });
 
-            if (dsHoaDon.Tables.Contains("HoaDon"))
-            {
-                dsHoaDon.Tables["HoaDon"].Clear();  // Xóa dữ liệu cũ
-                dsHoaDon.Tables["HoaDon"].Merge(data);  // Gộp dữ liệu mới vào
-            }
-            else
-            {
-                data.TableName = "HoaDon";   // Đặt tên bảng trước khi add
-                dsHoaDon.Tables.Add(data);   // Rồi mới add vào DataSet
-            }
+      if (dsHoaDon.Tables.Contains("HoaDon")) {
+        dsHoaDon.Tables["HoaDon"].Clear();  // Xóa dữ liệu cũ
+        dsHoaDon.Tables["HoaDon"].Merge(data);  // Gộp dữ liệu mới vào
+      } else {
+        data.TableName = "HoaDon";   // Đặt tên bảng trước khi add
+        dsHoaDon.Tables.Add(data);   // Rồi mới add vào DataSet
+      }
 
 
-            dgvInvoice.DataSource = dsHoaDon.Tables["HoaDon"]; // Cập nhật dữ liệu cho DataGridView
-        }
-        // Hàm dùng để cập nhật thông tin hóa đơn.
-        bool updateInvoice(int staffID, int customerID, DateTime dateTime, string status,
-                                             string deliveryAddress, double total, int invoiceID)
-        {
-            string queryString =
-                    "UPDATE HoaDon " +
-                    "SET MaNV = @MaNV , MaKH = @MaKH , NgayLapHoaDon = @NgayLapHoaDon , TrangThai = @TrangThai , DiaChiGiao = @DiaChiGiao , ThanhTien = @ThanhTien " +
-                    "WHERE MaHD = @MaHD";
+      dgvInvoice.DataSource = dsHoaDon.Tables["HoaDon"]; // Cập nhật dữ liệu cho DataGridView
+    }
+    // Hàm dùng để cập nhật thông tin hóa đơn.
+    bool updateInvoice(int staffID, int customerID, DateTime dateTime, string status,
+                                         string deliveryAddress, double total, int invoiceID) {
+      string queryString =
+              "UPDATE HoaDon " +
+              "SET MaNV = @MaNV , MaKH = @MaKH , NgayLapHoaDon = @NgayLapHoaDon , TrangThai = @TrangThai , DiaChiGiao = @DiaChiGiao , ThanhTien = @ThanhTien " +
+              "WHERE MaHD = @MaHD";
 
-            int result = DataProviderBUS.Instance.ExecuteNonQuery(queryString, new object[] {
+      int result = DataProviderBUS.Instance.ExecuteNonQuery(queryString, new object[] {
                     staffID,
                     customerID,
                     dateTime,
@@ -204,60 +190,53 @@ namespace PM_QL_BanHoa {
                     invoiceID
                 });
 
-            // Trả về số dòng được thực thi.
-            return result > 0;
-        }
-
-        // Cập nhật thông tin hóa đơn.
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Lấy dữ liệu ra từ các TextBox.
-                int staffID = int.Parse(txtMaNV.Text.ToString());
-                int customerID = int.Parse(txtMaKH.Text.ToString());
-                DateTime dateCreated = dateNgayLapHD.Value;
-                string status = txtTrangThai.Text.ToString();
-                string deliveryAddress = txtDiaChiGiao.Text.ToString();
-                double totalPrice = double.Parse(txtThanhTien.Text.ToString());
-                int invoiceID = int.Parse(txtMaHD.Text.ToString());
-
-                // Gọi hàm updateInvoice() để cập nhật thông tin hóa đơn.
-                bool succes = updateInvoice(staffID, customerID, dateCreated, status, deliveryAddress, totalPrice, invoiceID);
-
-                // Kiểm tra xem có thêm thành công hay không?
-                if (succes)
-                {
-                    MessageBox.Show(
-                        "Chỉnh sửa hóa đơn thành công",
-                        "Thông báo",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-
-                    // Gọi hàm loadInvoiceData() để hiển thị dữ liệu vào sau khi chỉnh sửa hóa đơn.
-                    LoadDSHD();
-                }
-                else
-                {
-                    MessageBox.Show(
-                        "Chỉnh sửa hóa đơn không thành công",
-                        "Thông báo",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(
-                    $"{exception.Message}",
-                    "Cảnh báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-            }
-        }
-
+      // Trả về số dòng được thực thi.
+      return result > 0;
     }
+
+    // Cập nhật thông tin hóa đơn.
+    private void btnEdit_Click(object sender, EventArgs e) {
+      try {
+        // Lấy dữ liệu ra từ các TextBox.
+        int staffID = int.Parse(txtMaNV.Text.ToString());
+        int customerID = int.Parse(txtMaKH.Text.ToString());
+        DateTime dateCreated = dateNgayLapHD.Value;
+        string status = txtTrangThai.Text.ToString();
+        string deliveryAddress = txtDiaChiGiao.Text.ToString();
+        double totalPrice = double.Parse(txtThanhTien.Text.ToString());
+        int invoiceID = int.Parse(txtMaHD.Text.ToString());
+
+        // Gọi hàm updateInvoice() để cập nhật thông tin hóa đơn.
+        bool succes = updateInvoice(staffID, customerID, dateCreated, status, deliveryAddress, totalPrice, invoiceID);
+
+        // Kiểm tra xem có thêm thành công hay không?
+        if (succes) {
+          MessageBox.Show(
+              "Chỉnh sửa hóa đơn thành công",
+              "Thông báo",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Information
+          );
+
+          // Gọi hàm loadInvoiceData() để hiển thị dữ liệu vào sau khi chỉnh sửa hóa đơn.
+          LoadDSHD();
+        } else {
+          MessageBox.Show(
+              "Chỉnh sửa hóa đơn không thành công",
+              "Thông báo",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Information
+          );
+        }
+      } catch (Exception exception) {
+        MessageBox.Show(
+            $"{exception.Message}",
+            "Cảnh báo",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error
+        );
+      }
+    }
+
+  }
 }

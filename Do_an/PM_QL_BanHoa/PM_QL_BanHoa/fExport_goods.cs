@@ -62,7 +62,7 @@ namespace PM_QL_BanHoa {
       }
       dgvExport_goods_goods.DataSource = dsHoaDonXuat.Tables[0]; // Đặt trực tiếp DataTable vào DataGridView
     }
-   
+
     private void LoadMaSP() {
       string query = "SELECT MaSP FROM SanPham";
 

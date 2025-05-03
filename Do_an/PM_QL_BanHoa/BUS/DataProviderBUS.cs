@@ -26,7 +26,7 @@ namespace BUS {
       return DataProviderDAO.Instance.ExecuteQuery(query, parameter);
     }
     public int ExecuteNonQuery(string query, object[] parameter = null) {
-      return DataProviderDAO.Instance.ExecuteNonQuery(query, parameter);
+      return DataProviderDAO.Instance._ExecuteNonQuery(query, parameter);
     }
   }
 }

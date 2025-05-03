@@ -12,19 +12,24 @@ namespace PM_QL_BanHoa.DAO {
   public class DataProviderDAO {
     private string ConnectionSTR = "Data Source=.;Initial Catalog=QuanLyBanHang;Integrated Security=True";
     private static DataProviderDAO instance;
-
     public static DataProviderDAO Instance {
-      get { if (instance == null) { instance = new DataProviderDAO(); } return DataProviderDAO.instance; }
+      get {
+        if (instance == null) {
+          instance = new DataProviderDAO();
+        }
+        return DataProviderDAO.instance;
+      }
+
       private set => instance = value;
     }
 
-    private DataProviderDAO() { }
-
     public DataTable ExecuteQuery(string query, object[] parameter = null) {
       DataTable data = new DataTable();
+
       using (SqlConnection connection = new SqlConnection(ConnectionSTR)) {
         connection.Open();
         SqlCommand sqlCommand = new SqlCommand(query, connection);
+
         if (parameter != null) {
           string[] listPara = query.Split(' ');
           int i = 0;
@@ -38,15 +43,47 @@ namespace PM_QL_BanHoa.DAO {
 
         SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
         adapter.Fill(data);
-        connection.Close();
       }
+
       return data;
     }
+
+    // Start
+    // _ExcuteNonQuery() của Quân
+    public int _ExecuteNonQuery(string query, object[] parameter = null) {
+      int data = 0;
+
+      using (SqlConnection connection = new SqlConnection(ConnectionSTR)) {
+        connection.Open();
+
+        using (SqlCommand command = new SqlCommand(query, connection)) {
+          if (parameter != null) {
+            // Tìm tất cả các tham số @... trong query (theo thứ tự)
+            string[] listPara = query.Split(new char[] { ' ', ',', '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
+            int i = 0;
+
+            foreach (string item in listPara) {
+              if (item.StartsWith("@")) {
+                command.Parameters.AddWithValue(item, parameter[i]);
+                i++;
+              }
+            }
+          }
+
+          data = command.ExecuteNonQuery();
+        }
+      }
+
+      return data;
+    }
+    // End
+
     public int ExecuteNonQuery(string query, object[] parameter = null) {
       int data = 0;
       using (SqlConnection connection = new SqlConnection(ConnectionSTR)) {
         connection.Open();
         SqlCommand sqlCommand = new SqlCommand(query, connection);
+
         if (parameter != null) {
           string[] listPara = query.Split(' ');
           int i = 0;
@@ -57,16 +94,19 @@ namespace PM_QL_BanHoa.DAO {
             }
           }
         }
+
         data = sqlCommand.ExecuteNonQuery();
-        connection.Close();
       }
+
       return data;
     }
+
     public object ExecuteScalar(string query, object[] parameter = null) {
       object data = 0;
       using (SqlConnection connection = new SqlConnection(ConnectionSTR)) {
         connection.Open();
         SqlCommand sqlCommand = new SqlCommand(query, connection);
+
         if (parameter != null) {
           string[] listPara = query.Split(' ');
           int i = 0;
@@ -77,9 +117,11 @@ namespace PM_QL_BanHoa.DAO {
             }
           }
         }
+
         data = sqlCommand.ExecuteScalar();
-        connection.Close();
+
       }
+
       return data;
     }
   }
