@@ -40,7 +40,7 @@ CREATE TABLE HoaDon (
     MaNV INT NOT NULL,
     MaKH INT NOT NULL,
     NgayLapHoaDon DATETIME DEFAULT GETDATE(),
-    TrangThai NVARCHAR(50) NOT NULL,
+    TrangThai INT NOT NULL,
     DiaChiGiao NVARCHAR(255) NOT NULL,
     ThanhTien DECIMAL(18,2) Default 0 CHECK (ThanhTien >= 0),
     FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
@@ -102,11 +102,11 @@ VALUES
 GO
 INSERT INTO HoaDon (MaNV, MaKH, NgayLapHoaDon, TrangThai, DiaChiGiao)
 VALUES
-(1, 1, '2025-04-01', N'Đã bán', N'123 Lê Lợi, Q1, TP.HCM'),
-(2, 2, '2025-04-02', N'Đã bán', N'456 Nguyễn Trãi, Q5, TP.HCM'),
-(3, 3, '2025-04-03', N'Đã hủy', N'789 Cách Mạng Tháng 8, Q3, TP.HCM'),
-(1, 4, '2025-04-04', N'Đã hủy', N'10 Trần Hưng Đạo, Q1, TP.HCM'),
-(2, 5, '2025-04-05', N'Đã bán', N'98 Phan Đăng Lưu, Q.Phú Nhuận, TP.HCM');
+(1, 1, '2025-04-01', 1, N'123 Lê Lợi, Q1, TP.HCM'),
+(2, 2, '2025-04-02', 1, N'456 Nguyễn Trãi, Q5, TP.HCM'),
+(3, 3, '2025-04-03', 1, N'789 Cách Mạng Tháng 8, Q3, TP.HCM'),
+(1, 4, '2025-04-04', 1, N'10 Trần Hưng Đạo, Q1, TP.HCM'),
+(2, 5, '2025-04-05', 1, N'98 Phan Đăng Lưu, Q.Phú Nhuận, TP.HCM');
 GO
 INSERT INTO ChiTietHoaDon (MaHD, MaSP, SoLuong)
 VALUES 

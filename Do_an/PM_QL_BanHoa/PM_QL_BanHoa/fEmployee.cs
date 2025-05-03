@@ -15,7 +15,7 @@ using PM_QL_BanHoa.BUS;
 
 namespace PM_QL_BanHoa {
   public partial class fEmployee : Form {
-    string strKetNoi = "Data Source=.\\SQLEXPRESS01;Initial Catalog=QuanLyBanHang;Integrated Security=True";
+    string strKetNoi = "Data Source=.;Initial Catalog=QuanLyBanHang;Integrated Security=True";
     DataSet dsNhanVien = new DataSet();
     SqlDataAdapter daNV;
     public fEmployee() {
