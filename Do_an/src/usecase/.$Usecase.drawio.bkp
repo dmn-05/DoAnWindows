@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="Page-1" id="F_bl2N8eSsj7aJy99ByN">
-    <mxGraphModel dx="1050" dy="1721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1577" dy="1928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -687,17 +687,31 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sNR800jeq4gYdnShBVYG-1" value="Thêm nhân viên" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="sNR800jeq4gYdnShBVYG-1" value="Thêm nhân viên" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="1130" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="sNR800jeq4gYdnShBVYG-2" value="" style="endArrow=classic;dashed=1;html=1;rounded=0;endFill=1;" edge="1" parent="1" source="sNR800jeq4gYdnShBVYG-1" target="1cnDnwMwc_Qfs5VOHH6G-49">
+        <mxCell id="sNR800jeq4gYdnShBVYG-2" value="" style="endArrow=classic;dashed=1;html=1;rounded=0;endFill=1;" parent="1" source="sNR800jeq4gYdnShBVYG-1" target="1cnDnwMwc_Qfs5VOHH6G-49" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="1026" as="sourcePoint" />
             <mxPoint x="553" y="1040" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sNR800jeq4gYdnShBVYG-3" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="sNR800jeq4gYdnShBVYG-2">
+        <mxCell id="sNR800jeq4gYdnShBVYG-3" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sNR800jeq4gYdnShBVYG-2" vertex="1" connectable="0">
           <mxGeometry x="-0.365" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V_6TxDWPsbp70Z-4VeL_-1" value="In hóa đơn" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V_6TxDWPsbp70Z-4VeL_-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="1cnDnwMwc_Qfs5VOHH6G-17" target="V_6TxDWPsbp70Z-4VeL_-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="529" y="191" as="sourcePoint" />
+            <mxPoint x="481" y="156" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V_6TxDWPsbp70Z-4VeL_-5" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V_6TxDWPsbp70Z-4VeL_-4">
+          <mxGeometry x="-0.0448" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>

@@ -20,7 +20,7 @@ namespace PM_QL_BanHoa {
 
     private void btnAdd_Click(object sender, EventArgs e) {
       if (string.IsNullOrWhiteSpace(cbMaSP.Text) || string.IsNullOrWhiteSpace(txtSoLuong.Text)) {
-        MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+        MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông Báo", MessageBoxButtons.OK);
         return;
       }
       Import_goodsDTO HoaDon = new Import_goodsDTO();

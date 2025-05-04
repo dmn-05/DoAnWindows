@@ -76,6 +76,20 @@ namespace PM_QL_BanHoa.Employee {
 			try {
 				// Lấy dữ liệu ra từ các TextBox.
 				//int customerID = int.Parse(txtCustomerID.Text.ToString());
+
+				if (string.IsNullOrWhiteSpace(txtCustomerID.Text) ||
+						string.IsNullOrWhiteSpace(txtPhoneNumber.Text) ||
+						string.IsNullOrWhiteSpace(txtEmail.Text) ||
+						string.IsNullOrWhiteSpace(txtAddress.Text)) {
+					MessageBox.Show(
+						"Vui lòng nhập đầy đủ thông tin.",
+						"Thông báo",
+						MessageBoxButtons.OK,
+						MessageBoxIcon.Warning
+					);
+					return;
+				}
+
 				string customerName = txtCustomerName.Text.ToString();
 				string phoneNumber = txtPhoneNumber.Text.ToString();
 				string email = txtEmail.Text.ToString();

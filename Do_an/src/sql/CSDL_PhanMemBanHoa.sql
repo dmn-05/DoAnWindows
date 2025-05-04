@@ -78,24 +78,13 @@ CREATE TABLE XuatHang (
 -- Bảng giỏ hàng
 CREATE TABLE GioHang (
 	MaGH INT IDENTITY(1,1) PRIMARY KEY, 
-	MaKH INT NULL,
 	MaSP INT NOT NULL,
 	SoLuong INT NOT NULL CHECK (SoLuong > 0),
 	GiaBanLe DECIMAL(18,2) NOT NULL,
 	TrangThai TINYINT,
 	ThanhTien AS (SoLuong * GiaBanLe) PERSISTED,
-	FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP),
-	FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
+	FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP)
 );
-
---ALTER TABLE GioHang
---ALTER COLUMN TrangThai TINYINT
-
---ALTER TABLE GioHang
---ADD TrangThai BIT DEFAULT 0
-
---ALTER TABLE GioHang
---DROP CONSTRAINT DF__GioHang__TrangTh__6E01572D;
 
 GO
 INSERT INTO NhanVien (TenNV, TenDangNhap, MatKhau, SoDienThoai, Email, DiaChi, ChucVu, TrangThai)

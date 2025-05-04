@@ -32,7 +32,7 @@ namespace BUS {
     }
 
     public object ExcuteScalar(string query, object[] parameter = null) {
-      return DataProviderDAO.Instance._ExecuteScalar(query, parameter);
+      return DataProviderDAO.Instance.ExecuteScalar(query, parameter);
     }
   }
 }

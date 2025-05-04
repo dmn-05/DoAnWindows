@@ -22,7 +22,7 @@ namespace PM_QL_BanHoa.Employee {
 
 		void loadCartData() {
 			try {
-				string queryString = "SELECT * FROM GioHang";
+				string queryString = "SELECT * FROM GioHang WHERE TrangThai = 0";
 				DataTable dataTable = DataProviderBUS.Instance.ExecuteQuery(queryString);
 				dataGridView.DataSource = dataTable;
 			} catch (Exception exception) {

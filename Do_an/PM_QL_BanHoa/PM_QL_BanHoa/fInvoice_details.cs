@@ -22,7 +22,7 @@ namespace PM_QL_BanHoa {
       LoadDSHD();
     }
     private void LoadDSHD() {
-      string query = "Select * From ChiTietHoaDon";
+      string query = "Select * From ChiTietHoaDon as CTHD, HoaDon as HD Where CTHD.MaHD = HD.MaHD AND TrangThai = 1";
       DataTable data = DataProviderBUS.Instance.ExecuteQuery(query);
       if (dsCTHoaDon.Tables.Count > 0) {
         dsCTHoaDon.Tables[0].Clear();
@@ -45,7 +45,7 @@ namespace PM_QL_BanHoa {
       }
 
       string name = txtMa.Text.Trim();
-      string query = "SELECT * FROM ChiTietHoaDon WHERE MaHD LIKE @MaHD";
+      string query = "SELECT * From ChiTietHoaDon as CTHD, HoaDon as HD Where CTHD.MaHD = HD.MaHD AND TrangThai = 1 AND CTHD.MaHD LIKE @MaHD";
 
       DataTable data = DataProviderBUS.Instance.ExecuteQuery(query, new object[] { "%" + name + "%" });
 
@@ -53,9 +53,10 @@ namespace PM_QL_BanHoa {
         dsCTHoaDon.Tables["CTHoaDon"].Clear();  // Xóa dữ liệu cũ
         dsCTHoaDon.Tables["CTHoaDon"].Merge(data);  // Gộp dữ liệu mới vào
       } else {
-        dsCTHoaDon.Tables.Add(data);  // Nếu chưa có, thêm bảng mới vào DataSet
-        dsCTHoaDon.Tables["CTHoaDon"].TableName = "CTHoaDon"; // Đặt lại tên bảng
+        data.TableName = "CTHoaDon";   // Đặt tên bảng trước khi add
+        dsCTHoaDon.Tables.Add(data);   // Rồi mới add vào DataSet
       }
+
 
       dgvInvoice_details.DataSource = dsCTHoaDon.Tables["CTHoaDon"]; // Cập nhật dữ liệu cho DataGridView
     }

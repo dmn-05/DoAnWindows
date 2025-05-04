@@ -701,16 +701,16 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="V_6TxDWPsbp70Z-4VeL_-1" value="In hóa đơn" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="V_6TxDWPsbp70Z-4VeL_-1" value="In hóa đơn" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="490" y="50" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="V_6TxDWPsbp70Z-4VeL_-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="1cnDnwMwc_Qfs5VOHH6G-17" target="V_6TxDWPsbp70Z-4VeL_-1">
+        <mxCell id="V_6TxDWPsbp70Z-4VeL_-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="1cnDnwMwc_Qfs5VOHH6G-17" target="V_6TxDWPsbp70Z-4VeL_-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="529" y="191" as="sourcePoint" />
             <mxPoint x="481" y="156" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="V_6TxDWPsbp70Z-4VeL_-5" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V_6TxDWPsbp70Z-4VeL_-4">
+        <mxCell id="V_6TxDWPsbp70Z-4VeL_-5" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="V_6TxDWPsbp70Z-4VeL_-4" vertex="1" connectable="0">
           <mxGeometry x="-0.0448" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
