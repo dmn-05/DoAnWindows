@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentSession.cs" />
     <Compile Include="Employee\frmBillManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee\frmBillManagement.Designer.cs">
       <DependentUpon>frmBillManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\frmCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\frmCart.Designer.cs">
+      <DependentUpon>frmCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee\frmCustomerManagement.cs">
       <SubType>Form</SubType>
@@ -146,6 +153,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Employee\frmBillManagement.resx">
       <DependentUpon>frmBillManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\frmCart.resx">
+      <DependentUpon>frmCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\frmCustomerManagement.resx">
       <DependentUpon>frmCustomerManagement.cs</DependentUpon>

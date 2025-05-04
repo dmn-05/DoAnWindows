@@ -1,4 +1,6 @@
-﻿using PM_QL_BanHoa.BUS;
+﻿using BUS;
+using DTO;
+using PM_QL_BanHoa.BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +31,8 @@ namespace PM_QL_BanHoa {
         f.ShowDialog();
         this.Show();
       } else if (Login(Username, Password)) {
-        fSales f = new fSales();
+				CurrentSession.CurrentEmployee = EmployeeBUS.Instance.GetEmployeeByUsername(Username);
+				fSales f = new fSales();
         this.txtUserName.Clear();
         this.txtPassword.Clear();
         this.Hide();
@@ -62,5 +65,21 @@ namespace PM_QL_BanHoa {
     private void fLogin_Load(object sender, EventArgs e) {
      
     }
-  }
+
+
+		private void txtUserName_KeyPress(object sender, KeyPressEventArgs e) {
+			if (e.KeyChar == (char)Keys.Enter) {
+				e.Handled = true;
+				btnLogin.PerformClick();
+			}
+		}
+
+		private void txtPassword_KeyPress(object sender, KeyPressEventArgs e) {
+			if (e.KeyChar == (char)Keys.Enter) {
+				e.Handled = true;
+				btnLogin.PerformClick();
+			}
+		}
+
+	}
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PM_QL_BanHoa.Employee;
 
 namespace PM_QL_BanHoa {
   public partial class fAdmin : Form {
@@ -31,14 +32,12 @@ namespace PM_QL_BanHoa {
       toolTip1.SetToolTip(picExport_goods, "Xuất Hàng");
       toolTip1.SetToolTip(picStatistics, "Thống Kê");
       toolTip1.SetToolTip(picProduct, "Sản Phẩm");
-
     }
 
     private void fAdmin_FormClosing(object sender, FormClosingEventArgs e) {
       if (MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK) {
         e.Cancel = true;
       }
-      
     }
 
     private void picEmployee_Click(object sender, EventArgs e) {
@@ -105,6 +104,7 @@ namespace PM_QL_BanHoa {
 
     private void picProduct_Click(object sender, EventArgs e) {
       fProduct f = new fProduct();
+
       this.Hide();
       f.ShowDialog();
       this.Show();

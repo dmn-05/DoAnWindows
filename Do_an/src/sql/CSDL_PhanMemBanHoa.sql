@@ -42,7 +42,7 @@ CREATE TABLE HoaDon (
     NgayLapHoaDon DATETIME DEFAULT GETDATE(),
     TrangThai INT NOT NULL,
     DiaChiGiao NVARCHAR(255) NOT NULL,
-    ThanhTien DECIMAL(18,2) Default 0 CHECK (ThanhTien >= 0),
+    ThanhTien DECIMAL(18,2) CHECK (ThanhTien >= 0) NOT NULL,
     FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
     FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
 );
@@ -75,6 +75,17 @@ CREATE TABLE XuatHang (
 	ThanhTien DECIMAL(18,2) NOT NULL,
     FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP)
 );
+-- Bảng giỏ hàng
+CREATE TABLE GioHang (
+	MaGH INT IDENTITY(1,1) PRIMARY KEY, 
+	MaSP INT NOT NULL,
+	SoLuong INT NOT NULL CHECK (SoLuong > 0),
+	GiaBanLe DECIMAL(18,2) NOT NULL,
+	TrangThai TINYINT,
+	ThanhTien AS (SoLuong * GiaBanLe) PERSISTED,
+	FOREIGN KEY (MaSP) REFERENCES SanPham(MaSP)
+);
+
 GO
 INSERT INTO NhanVien (TenNV, TenDangNhap, MatKhau, SoDienThoai, Email, DiaChi, ChucVu, TrangThai)
 VALUES 
@@ -100,13 +111,13 @@ VALUES
     (N'Hoa Ly', 90000, 60000, 75000, 70),
     (N'Hoa Tulip', 150000, 110000, 130000, 30);
 GO
-INSERT INTO HoaDon (MaNV, MaKH, NgayLapHoaDon, TrangThai, DiaChiGiao)
+INSERT INTO HoaDon (MaNV, MaKH, NgayLapHoaDon, TrangThai, DiaChiGiao, ThanhTien)
 VALUES
-(1, 1, '2025-04-01', 1, N'123 Lê Lợi, Q1, TP.HCM'),
-(2, 2, '2025-04-02', 1, N'456 Nguyễn Trãi, Q5, TP.HCM'),
-(3, 3, '2025-04-03', 1, N'789 Cách Mạng Tháng 8, Q3, TP.HCM'),
-(1, 4, '2025-04-04', 1, N'10 Trần Hưng Đạo, Q1, TP.HCM'),
-(2, 5, '2025-04-05', 1, N'98 Phan Đăng Lưu, Q.Phú Nhuận, TP.HCM');
+(1, 1, '2025-04-01', 1, N'123 Lê Lợi, Q1, TP.HCM', 1500000),
+(2, 2, '2025-04-02', 1, N'456 Nguyễn Trãi, Q5, TP.HCM', 2250000),
+(3, 3, '2025-04-03', 1, N'789 Cách Mạng Tháng 8, Q3, TP.HCM', 1750000),
+(1, 4, '2025-04-04', 1, N'10 Trần Hưng Đạo, Q1, TP.HCM', 0),
+(2, 5, '2025-04-05', 1, N'98 Phan Đăng Lưu, Q.Phú Nhuận, TP.HCM', 2000000);
 GO
 INSERT INTO ChiTietHoaDon (MaHD, MaSP, SoLuong)
 VALUES 
@@ -136,6 +147,7 @@ VALUES
 (5, 4, 2),
 (5, 5, 1);
 GO
+
 CREATE PROC USP_GetAccountByUserName
 @username NVARCHAR(100)
 AS
@@ -143,6 +155,7 @@ BEGIN
 	SELECT * FROM NHANVIEN WHERE TenDangNhap = @username
 END
 GO
+
 CREATE PROC USP_Login
 @username NVARCHAR(100), @password NVARCHAR(100)
 AS
@@ -150,6 +163,7 @@ BEGIN
 	SELECT * FROM NHANVIEN WHERE TenDangNhap = @username AND MatKhau = @password
 END
 GO
+
 CREATE PROC USP_Login_Admin
 @username NVARCHAR(100), @password NVARCHAR(100)
 AS
