@@ -25,7 +25,7 @@ namespace PM_QL_BanHoa.Employee {
 				MessageBoxIcon.Question
 			);
 
-			if ( result == DialogResult.Yes ) {
+			if ( result == DialogResult.OK ) {
 				e.Cancel = true;
 			}
 		}
