@@ -65,59 +65,53 @@
 			// 
 			// txtDeliveryAddress
 			// 
-			this.txtDeliveryAddress.Location = new System.Drawing.Point(181, 133);
-			this.txtDeliveryAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtDeliveryAddress.Location = new System.Drawing.Point(272, 205);
 			this.txtDeliveryAddress.Multiline = true;
 			this.txtDeliveryAddress.Name = "txtDeliveryAddress";
-			this.txtDeliveryAddress.Size = new System.Drawing.Size(200, 50);
+			this.txtDeliveryAddress.Size = new System.Drawing.Size(298, 75);
 			this.txtDeliveryAddress.TabIndex = 25;
 			// 
 			// lblDeliveryAddress
 			// 
 			this.lblDeliveryAddress.AutoSize = true;
 			this.lblDeliveryAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDeliveryAddress.Location = new System.Drawing.Point(56, 133);
-			this.lblDeliveryAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblDeliveryAddress.Location = new System.Drawing.Point(84, 205);
 			this.lblDeliveryAddress.Name = "lblDeliveryAddress";
-			this.lblDeliveryAddress.Size = new System.Drawing.Size(95, 20);
+			this.lblDeliveryAddress.Size = new System.Drawing.Size(145, 29);
 			this.lblDeliveryAddress.TabIndex = 24;
 			this.lblDeliveryAddress.Text = "Địa chỉ giao:";
 			// 
 			// txtTotalPrice
 			// 
-			this.txtTotalPrice.Location = new System.Drawing.Point(181, 183);
-			this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtTotalPrice.Location = new System.Drawing.Point(272, 282);
 			this.txtTotalPrice.Name = "txtTotalPrice";
 			this.txtTotalPrice.ReadOnly = true;
-			this.txtTotalPrice.Size = new System.Drawing.Size(200, 20);
+			this.txtTotalPrice.Size = new System.Drawing.Size(298, 26);
 			this.txtTotalPrice.TabIndex = 23;
 			// 
 			// lblTotalPrice
 			// 
 			this.lblTotalPrice.AutoSize = true;
 			this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTotalPrice.Location = new System.Drawing.Point(47, 181);
-			this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblTotalPrice.Location = new System.Drawing.Point(70, 278);
 			this.lblTotalPrice.Name = "lblTotalPrice";
-			this.lblTotalPrice.Size = new System.Drawing.Size(88, 20);
+			this.lblTotalPrice.Size = new System.Drawing.Size(132, 29);
 			this.lblTotalPrice.TabIndex = 22;
 			this.lblTotalPrice.Text = "Thành tiền:";
 			// 
 			// txtPrice
 			// 
-			this.txtPrice.Location = new System.Drawing.Point(181, 129);
-			this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtPrice.Location = new System.Drawing.Point(272, 198);
 			this.txtPrice.Name = "txtPrice";
 			this.txtPrice.ReadOnly = true;
-			this.txtPrice.Size = new System.Drawing.Size(200, 20);
+			this.txtPrice.Size = new System.Drawing.Size(298, 26);
 			this.txtPrice.TabIndex = 21;
 			// 
 			// txtQuantity
 			// 
-			this.txtQuantity.Location = new System.Drawing.Point(181, 83);
-			this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtQuantity.Location = new System.Drawing.Point(272, 128);
 			this.txtQuantity.Name = "txtQuantity";
-			this.txtQuantity.Size = new System.Drawing.Size(200, 20);
+			this.txtQuantity.Size = new System.Drawing.Size(298, 26);
 			this.txtQuantity.TabIndex = 20;
 			this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
 			// 
@@ -125,10 +119,9 @@
 			// 
 			this.lblPrice.AutoSize = true;
 			this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPrice.Location = new System.Drawing.Point(67, 127);
-			this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblPrice.Location = new System.Drawing.Point(100, 195);
 			this.lblPrice.Name = "lblPrice";
-			this.lblPrice.Size = new System.Drawing.Size(68, 20);
+			this.lblPrice.Size = new System.Drawing.Size(102, 29);
 			this.lblPrice.TabIndex = 19;
 			this.lblPrice.Text = "Đơn giá:";
 			// 
@@ -137,10 +130,9 @@
 			this.btnPayment.BackColor = System.Drawing.Color.Transparent;
 			this.btnPayment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPayment.BackgroundImage")));
 			this.btnPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnPayment.Location = new System.Drawing.Point(240, 7);
-			this.btnPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnPayment.Location = new System.Drawing.Point(360, 11);
 			this.btnPayment.Name = "btnPayment";
-			this.btnPayment.Size = new System.Drawing.Size(60, 60);
+			this.btnPayment.Size = new System.Drawing.Size(90, 92);
 			this.btnPayment.TabIndex = 18;
 			this.btnPayment.UseVisualStyleBackColor = false;
 			this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
@@ -149,28 +141,25 @@
 			// 
 			this.lblSellQuantity.AutoSize = true;
 			this.lblSellQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblSellQuantity.Location = new System.Drawing.Point(44, 81);
-			this.lblSellQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblSellQuantity.Location = new System.Drawing.Point(66, 125);
 			this.lblSellQuantity.Name = "lblSellQuantity";
-			this.lblSellQuantity.Size = new System.Drawing.Size(107, 20);
+			this.lblSellQuantity.Size = new System.Drawing.Size(161, 29);
 			this.lblSellQuantity.TabIndex = 16;
 			this.lblSellQuantity.Text = "Số lượng bán:";
 			// 
 			// txtProductID
 			// 
-			this.txtProductID.Location = new System.Drawing.Point(181, 30);
-			this.txtProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtProductID.Location = new System.Drawing.Point(272, 46);
 			this.txtProductID.Name = "txtProductID";
 			this.txtProductID.ReadOnly = true;
-			this.txtProductID.Size = new System.Drawing.Size(200, 20);
+			this.txtProductID.Size = new System.Drawing.Size(298, 26);
 			this.txtProductID.TabIndex = 15;
 			// 
 			// txtCustomerPhoneNumber
 			// 
-			this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(181, 28);
-			this.txtCustomerPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(272, 43);
 			this.txtCustomerPhoneNumber.Name = "txtCustomerPhoneNumber";
-			this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(200, 20);
+			this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(298, 26);
 			this.txtCustomerPhoneNumber.TabIndex = 7;
 			this.txtCustomerPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerPhoneNumber_KeyPress);
 			// 
@@ -178,10 +167,9 @@
 			// 
 			this.lblProductID.AutoSize = true;
 			this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblProductID.Location = new System.Drawing.Point(37, 28);
-			this.lblProductID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblProductID.Location = new System.Drawing.Point(56, 43);
 			this.lblProductID.Name = "lblProductID";
-			this.lblProductID.Size = new System.Drawing.Size(109, 20);
+			this.lblProductID.Size = new System.Drawing.Size(162, 29);
 			this.lblProductID.TabIndex = 1;
 			this.lblProductID.Text = "Mã sản phẩm:";
 			// 
@@ -189,10 +177,9 @@
 			// 
 			this.lblCustomerPhoneNumber.AutoSize = true;
 			this.lblCustomerPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerPhoneNumber.Location = new System.Drawing.Point(42, 28);
-			this.lblCustomerPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblCustomerPhoneNumber.Location = new System.Drawing.Point(63, 43);
 			this.lblCustomerPhoneNumber.Name = "lblCustomerPhoneNumber";
-			this.lblCustomerPhoneNumber.Size = new System.Drawing.Size(106, 20);
+			this.lblCustomerPhoneNumber.Size = new System.Drawing.Size(160, 29);
 			this.lblCustomerPhoneNumber.TabIndex = 0;
 			this.lblCustomerPhoneNumber.Text = "Số điện thoại:";
 			// 
@@ -200,19 +187,17 @@
 			// 
 			this.lblSearchProductName.AutoSize = true;
 			this.lblSearchProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblSearchProductName.Location = new System.Drawing.Point(45, 9);
-			this.lblSearchProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblSearchProductName.Location = new System.Drawing.Point(68, 14);
 			this.lblSearchProductName.Name = "lblSearchProductName";
-			this.lblSearchProductName.Size = new System.Drawing.Size(79, 17);
+			this.lblSearchProductName.Size = new System.Drawing.Size(114, 25);
 			this.lblSearchProductName.TabIndex = 3;
 			this.lblSearchProductName.Text = "Nhập tên:";
 			// 
 			// _txtProductName
 			// 
-			this._txtProductName.Location = new System.Drawing.Point(128, 9);
-			this._txtProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this._txtProductName.Location = new System.Drawing.Point(192, 14);
 			this._txtProductName.Name = "_txtProductName";
-			this._txtProductName.Size = new System.Drawing.Size(145, 20);
+			this._txtProductName.Size = new System.Drawing.Size(216, 26);
 			this._txtProductName.TabIndex = 2;
 			// 
 			// panel1
@@ -228,10 +213,9 @@
 			this.panel1.Controls.Add(this.grbCustomerInformation);
 			this.panel1.Controls.Add(this.dataGridView);
 			this.panel1.Controls.Add(this.grbSaleProcess);
-			this.panel1.Location = new System.Drawing.Point(8, 8);
-			this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panel1.Location = new System.Drawing.Point(12, 12);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1111, 571);
+			this.panel1.Size = new System.Drawing.Size(1666, 878);
 			this.panel1.TabIndex = 4;
 			// 
 			// panel3
@@ -239,9 +223,10 @@
 			this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.panel3.Controls.Add(this.btnPayment);
 			this.panel3.Controls.Add(this.btnRemoveFromCart);
-			this.panel3.Location = new System.Drawing.Point(692, 497);
+			this.panel3.Location = new System.Drawing.Point(1038, 765);
+			this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(414, 70);
+			this.panel3.Size = new System.Drawing.Size(621, 108);
 			this.panel3.TabIndex = 21;
 			// 
 			// btnRemoveFromCart
@@ -249,10 +234,9 @@
 			this.btnRemoveFromCart.BackColor = System.Drawing.Color.Transparent;
 			this.btnRemoveFromCart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveFromCart.BackgroundImage")));
 			this.btnRemoveFromCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.btnRemoveFromCart.Location = new System.Drawing.Point(104, 5);
-			this.btnRemoveFromCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnRemoveFromCart.Location = new System.Drawing.Point(156, 8);
 			this.btnRemoveFromCart.Name = "btnRemoveFromCart";
-			this.btnRemoveFromCart.Size = new System.Drawing.Size(60, 60);
+			this.btnRemoveFromCart.Size = new System.Drawing.Size(90, 92);
 			this.btnRemoveFromCart.TabIndex = 19;
 			this.btnRemoveFromCart.Text = "\r\n";
 			this.btnRemoveFromCart.UseVisualStyleBackColor = false;
@@ -264,17 +248,17 @@
 			this.panel2.Controls.Add(this.btnSearchProduct);
 			this.panel2.Controls.Add(this._txtProductName);
 			this.panel2.Controls.Add(this.lblSearchProductName);
-			this.panel2.Location = new System.Drawing.Point(692, 4);
+			this.panel2.Location = new System.Drawing.Point(1038, 6);
+			this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(414, 37);
+			this.panel2.Size = new System.Drawing.Size(621, 57);
 			this.panel2.TabIndex = 20;
 			// 
 			// btnSearchProduct
 			// 
-			this.btnSearchProduct.Location = new System.Drawing.Point(277, 8);
-			this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnSearchProduct.Location = new System.Drawing.Point(416, 12);
 			this.btnSearchProduct.Name = "btnSearchProduct";
-			this.btnSearchProduct.Size = new System.Drawing.Size(63, 24);
+			this.btnSearchProduct.Size = new System.Drawing.Size(94, 37);
 			this.btnSearchProduct.TabIndex = 14;
 			this.btnSearchProduct.Text = "Tìm kiếm";
 			this.btnSearchProduct.UseVisualStyleBackColor = true;
@@ -288,29 +272,30 @@
 			this.grbCustomerInformation.Controls.Add(this.lblDeliveryAddress);
 			this.grbCustomerInformation.Controls.Add(this.txtCustomerPhoneNumber);
 			this.grbCustomerInformation.Controls.Add(this.lblCustomerPhoneNumber);
-			this.grbCustomerInformation.Location = new System.Drawing.Point(687, 281);
+			this.grbCustomerInformation.Location = new System.Drawing.Point(1030, 432);
+			this.grbCustomerInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.grbCustomerInformation.Name = "grbCustomerInformation";
-			this.grbCustomerInformation.Size = new System.Drawing.Size(421, 210);
+			this.grbCustomerInformation.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.grbCustomerInformation.Size = new System.Drawing.Size(632, 323);
 			this.grbCustomerInformation.TabIndex = 15;
 			this.grbCustomerInformation.TabStop = false;
 			this.grbCustomerInformation.Text = "Thông tin khách hàng";
 			// 
 			// txtCustomerName
 			// 
-			this.txtCustomerName.Location = new System.Drawing.Point(181, 76);
-			this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtCustomerName.Location = new System.Drawing.Point(272, 117);
 			this.txtCustomerName.Name = "txtCustomerName";
-			this.txtCustomerName.Size = new System.Drawing.Size(200, 20);
+			this.txtCustomerName.ReadOnly = true;
+			this.txtCustomerName.Size = new System.Drawing.Size(298, 26);
 			this.txtCustomerName.TabIndex = 27;
 			// 
 			// lblCustomerName
 			// 
 			this.lblCustomerName.AutoSize = true;
 			this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerName.Location = new System.Drawing.Point(42, 76);
-			this.lblCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblCustomerName.Location = new System.Drawing.Point(63, 117);
 			this.lblCustomerName.Name = "lblCustomerName";
-			this.lblCustomerName.Size = new System.Drawing.Size(127, 20);
+			this.lblCustomerName.Size = new System.Drawing.Size(190, 29);
 			this.lblCustomerName.TabIndex = 26;
 			this.lblCustomerName.Text = "Tên khách hàng:";
 			// 
@@ -328,13 +313,12 @@
             this.colPrice,
             this.colTotalPrice,
             this.colStatus});
-			this.dataGridView.Location = new System.Drawing.Point(2, 46);
-			this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dataGridView.Location = new System.Drawing.Point(3, 71);
 			this.dataGridView.Name = "dataGridView";
 			this.dataGridView.RowHeadersWidth = 62;
 			this.dataGridView.RowTemplate.Height = 28;
 			this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dataGridView.Size = new System.Drawing.Size(680, 526);
+			this.dataGridView.Size = new System.Drawing.Size(1020, 809);
 			this.dataGridView.TabIndex = 0;
 			this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
 			// 
@@ -393,21 +377,20 @@
 			this.grbSaleProcess.Controls.Add(this.lblSellQuantity);
 			this.grbSaleProcess.Controls.Add(this.txtProductID);
 			this.grbSaleProcess.Controls.Add(this.lblProductID);
-			this.grbSaleProcess.Location = new System.Drawing.Point(687, 46);
-			this.grbSaleProcess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.grbSaleProcess.Location = new System.Drawing.Point(1030, 71);
 			this.grbSaleProcess.Name = "grbSaleProcess";
-			this.grbSaleProcess.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.grbSaleProcess.Size = new System.Drawing.Size(422, 230);
+			this.grbSaleProcess.Size = new System.Drawing.Size(633, 354);
 			this.grbSaleProcess.TabIndex = 1;
 			this.grbSaleProcess.TabStop = false;
 			this.grbSaleProcess.Text = "Bán hàng";
 			// 
 			// frmCart
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1126, 587);
+			this.ClientSize = new System.Drawing.Size(1689, 903);
 			this.Controls.Add(this.panel1);
+			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "frmCart";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Giỏ hàng";

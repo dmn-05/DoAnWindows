@@ -76,7 +76,7 @@
 			// 
 			this.ptbSaleProcessing.Image = ((System.Drawing.Image)(resources.GetObject("ptbSaleProcessing.Image")));
 			this.ptbSaleProcessing.Location = new System.Drawing.Point(542, 33);
-			this.ptbSaleProcessing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.ptbSaleProcessing.Margin = new System.Windows.Forms.Padding(2);
 			this.ptbSaleProcessing.Name = "ptbSaleProcessing";
 			this.ptbSaleProcessing.Size = new System.Drawing.Size(133, 130);
 			this.ptbSaleProcessing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -95,6 +95,7 @@
 			this.Controls.Add(this.ptbBillManagement);
 			this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.Name = "fSales";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "fSales";
 			this.Load += new System.EventHandler(this.fSales_Load);
 			((System.ComponentModel.ISupportInitialize)(this.ptbBillManagement)).EndInit();

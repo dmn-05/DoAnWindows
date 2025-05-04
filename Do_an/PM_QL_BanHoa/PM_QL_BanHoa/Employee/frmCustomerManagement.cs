@@ -75,7 +75,7 @@ namespace PM_QL_BanHoa.Employee {
 		private void btnAddCustomer_Click(object sender, EventArgs e) {
 			try {
 				// Lấy dữ liệu ra từ các TextBox.
-				int customerID = int.Parse(txtCustomerID.Text.ToString());
+				//int customerID = int.Parse(txtCustomerID.Text.ToString());
 				string customerName = txtCustomerName.Text.ToString();
 				string phoneNumber = txtPhoneNumber.Text.ToString();
 				string email = txtEmail.Text.ToString();

@@ -43,10 +43,10 @@ namespace PM_QL_BanHoa.Employee {
 			if (e.RowIndex >= 0) {
 				DataGridViewRow row = dataGridView.Rows[e.RowIndex];
 
-				txtProductID.Text = row.Cells[2].Value.ToString();
-				txtQuantity.Text = row.Cells[3].Value.ToString();
-				txtPrice.Text = row.Cells[4].Value.ToString();
-				txtTotalPrice.Text = row.Cells[5].Value.ToString();
+				txtProductID.Text = row.Cells["colProductID"].Value.ToString();
+				txtQuantity.Text = row.Cells["colQuantity"].Value.ToString();
+				txtPrice.Text = row.Cells["colPrice"].Value.ToString();
+				txtTotalPrice.Text = row.Cells["colTotalPrice"].Value.ToString();
 			}
 		}
 
@@ -66,6 +66,12 @@ namespace PM_QL_BanHoa.Employee {
 					MessageBoxIcon.Information
 				);
 				txtCustomerName.Text = "";
+
+				// Hiển thị form thêm khách hàng.
+				frmCustomerManagement customerManagement = new frmCustomerManagement();
+				this.Hide();
+				customerManagement.ShowDialog();
+				this.Show();
 			}
 		}
 
