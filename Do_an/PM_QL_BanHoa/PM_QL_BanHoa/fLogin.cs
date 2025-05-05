@@ -24,6 +24,7 @@ namespace PM_QL_BanHoa {
       string Password = txtPassword.Text;
 
       if (Login_Admin(Username, Password)) {
+        CurrentSession.CurrentEmployee = EmployeeBUS.Instance.GetEmployeeByUsername(Username);
         fAdmin f = new fAdmin();
         this.txtUserName.Clear();
         this.txtPassword.Clear();

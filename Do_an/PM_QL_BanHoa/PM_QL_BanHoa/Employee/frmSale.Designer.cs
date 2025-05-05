@@ -123,12 +123,13 @@
       // 
       // btnSearchProduct
       // 
-      this.btnSearchProduct.Location = new System.Drawing.Point(388, 10);
+      this.btnSearchProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchProduct.BackgroundImage")));
+      this.btnSearchProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+      this.btnSearchProduct.Location = new System.Drawing.Point(388, 7);
       this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
       this.btnSearchProduct.Name = "btnSearchProduct";
-      this.btnSearchProduct.Size = new System.Drawing.Size(84, 30);
+      this.btnSearchProduct.Size = new System.Drawing.Size(42, 30);
       this.btnSearchProduct.TabIndex = 14;
-      this.btnSearchProduct.Text = "Tìm kiếm";
       this.btnSearchProduct.UseVisualStyleBackColor = true;
       this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
       // 
@@ -155,7 +156,7 @@
       this.panel2.Controls.Add(this.lblSearchProductName);
       this.panel2.Controls.Add(this._txtProductName);
       this.panel2.Location = new System.Drawing.Point(916, 5);
-      this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+      this.panel2.Margin = new System.Windows.Forms.Padding(4);
       this.panel2.Name = "panel2";
       this.panel2.Size = new System.Drawing.Size(563, 47);
       this.panel2.TabIndex = 15;
@@ -252,6 +253,7 @@
       this.txtQuantity.Name = "txtQuantity";
       this.txtQuantity.Size = new System.Drawing.Size(265, 22);
       this.txtQuantity.TabIndex = 20;
+      this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
       this.txtQuantity.MouseLeave += new System.EventHandler(this.txtQuantity_MouseLeave);
       // 
       // lblPrice
@@ -333,6 +335,7 @@
       this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
       this.Name = "frmSale";
       this.Text = "Bán hàng";
+      this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSale_FormClosing);
       this.Load += new System.EventHandler(this.frmSale_Load);
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

@@ -10,7 +10,7 @@ using PM_QL_BanHoa.DAO;
 
 namespace PM_QL_BanHoa.DAO {
   public class DataProviderDAO {
-    private string ConnectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Security=True";
+    private string ConnectionSTR = "Data Source=.;Initial Catalog=QuanLyBanHang;Integrated Security=True";
     private static DataProviderDAO instance;
     public static DataProviderDAO Instance {
       get {

@@ -161,6 +161,7 @@
       // 
       this.txtThanhTien.Location = new System.Drawing.Point(145, 473);
       this.txtThanhTien.Name = "txtThanhTien";
+      this.txtThanhTien.ReadOnly = true;
       this.txtThanhTien.Size = new System.Drawing.Size(229, 30);
       this.txtThanhTien.TabIndex = 16;
       // 

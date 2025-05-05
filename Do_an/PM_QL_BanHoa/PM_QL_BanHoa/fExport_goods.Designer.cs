@@ -24,10 +24,8 @@
     /// </summary>
     private void InitializeComponent() {
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
       System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fExport_goods));
-      this.cbMaSP = new System.Windows.Forms.ComboBox();
       this.dgvExport_goods_goods = new System.Windows.Forms.DataGridView();
       this.colMaHDXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.colMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -35,27 +33,20 @@
       this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-      this.groupBox1 = new System.Windows.Forms.GroupBox();
       this.groupBox2 = new System.Windows.Forms.GroupBox();
+      this.cbMaSP = new System.Windows.Forms.ComboBox();
       this.label5 = new System.Windows.Forms.Label();
       this.label4 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
       this.btnAdd = new System.Windows.Forms.Button();
       this.dateNgayXuat = new System.Windows.Forms.DateTimePicker();
       this.txtSoLuong = new System.Windows.Forms.TextBox();
+      this.groupBox1 = new System.Windows.Forms.GroupBox();
       ((System.ComponentModel.ISupportInitialize)(this.dgvExport_goods_goods)).BeginInit();
       this.tableLayoutPanel1.SuspendLayout();
-      this.groupBox1.SuspendLayout();
       this.groupBox2.SuspendLayout();
+      this.groupBox1.SuspendLayout();
       this.SuspendLayout();
-      // 
-      // cbMaSP
-      // 
-      this.cbMaSP.FormattingEnabled = true;
-      this.cbMaSP.Location = new System.Drawing.Point(152, 70);
-      this.cbMaSP.Name = "cbMaSP";
-      this.cbMaSP.Size = new System.Drawing.Size(229, 33);
-      this.cbMaSP.TabIndex = 43;
       // 
       // dgvExport_goods_goods
       // 
@@ -70,19 +61,11 @@
             this.colNgayXuat,
             this.colSoLuong,
             this.colThanhTien});
-      dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-      dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-      dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-      dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-      dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-      dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-      this.dgvExport_goods_goods.DefaultCellStyle = dataGridViewCellStyle2;
       this.dgvExport_goods_goods.Location = new System.Drawing.Point(26, 46);
       this.dgvExport_goods_goods.Name = "dgvExport_goods_goods";
       this.dgvExport_goods_goods.RowHeadersWidth = 51;
-      dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-      this.dgvExport_goods_goods.RowsDefaultCellStyle = dataGridViewCellStyle3;
+      dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+      this.dgvExport_goods_goods.RowsDefaultCellStyle = dataGridViewCellStyle2;
       this.dgvExport_goods_goods.RowTemplate.Height = 24;
       this.dgvExport_goods_goods.Size = new System.Drawing.Size(786, 657);
       this.dgvExport_goods_goods.TabIndex = 0;
@@ -131,8 +114,8 @@
       this.tableLayoutPanel1.ColumnCount = 2;
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
       this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-      this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
       this.tableLayoutPanel1.Controls.Add(this.groupBox2, 1, 0);
+      this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
       this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
       this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -141,24 +124,11 @@
       this.tableLayoutPanel1.Size = new System.Drawing.Size(1247, 738);
       this.tableLayoutPanel1.TabIndex = 3;
       // 
-      // groupBox1
-      // 
-      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-      this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-      this.groupBox1.Controls.Add(this.dgvExport_goods_goods);
-      this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.groupBox1.ForeColor = System.Drawing.Color.Indigo;
-      this.groupBox1.Location = new System.Drawing.Point(3, 3);
-      this.groupBox1.Name = "groupBox1";
-      this.groupBox1.Size = new System.Drawing.Size(841, 732);
-      this.groupBox1.TabIndex = 1;
-      this.groupBox1.TabStop = false;
-      this.groupBox1.Text = "Quản Lý Xuất Hàng";
-      // 
       // groupBox2
       // 
+      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox2.BackColor = System.Drawing.Color.Transparent;
       this.groupBox2.Controls.Add(this.cbMaSP);
       this.groupBox2.Controls.Add(this.label5);
@@ -172,9 +142,17 @@
       this.groupBox2.Location = new System.Drawing.Point(850, 3);
       this.groupBox2.Name = "groupBox2";
       this.groupBox2.Size = new System.Drawing.Size(394, 732);
-      this.groupBox2.TabIndex = 2;
+      this.groupBox2.TabIndex = 3;
       this.groupBox2.TabStop = false;
       this.groupBox2.Text = "Xử Lý";
+      // 
+      // cbMaSP
+      // 
+      this.cbMaSP.FormattingEnabled = true;
+      this.cbMaSP.Location = new System.Drawing.Point(152, 70);
+      this.cbMaSP.Name = "cbMaSP";
+      this.cbMaSP.Size = new System.Drawing.Size(229, 33);
+      this.cbMaSP.TabIndex = 43;
       // 
       // label5
       // 
@@ -205,8 +183,8 @@
       // 
       // btnAdd
       // 
-      this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Left;
-      this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+      this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+      this.btnAdd.BackColor = System.Drawing.Color.Transparent;
       this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
       this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
       this.btnAdd.ForeColor = System.Drawing.Color.Black;
@@ -234,6 +212,22 @@
       this.txtSoLuong.Size = new System.Drawing.Size(229, 30);
       this.txtSoLuong.TabIndex = 39;
       // 
+      // groupBox1
+      // 
+      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+      this.groupBox1.Controls.Add(this.dgvExport_goods_goods);
+      this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.groupBox1.ForeColor = System.Drawing.Color.Indigo;
+      this.groupBox1.Location = new System.Drawing.Point(3, 3);
+      this.groupBox1.Name = "groupBox1";
+      this.groupBox1.Size = new System.Drawing.Size(841, 732);
+      this.groupBox1.TabIndex = 1;
+      this.groupBox1.TabStop = false;
+      this.groupBox1.Text = "Quản Lý Xuất Hàng";
+      // 
       // fExport_goods
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,30 +244,29 @@
       this.Load += new System.EventHandler(this.fExport_goods_Load);
       ((System.ComponentModel.ISupportInitialize)(this.dgvExport_goods_goods)).EndInit();
       this.tableLayoutPanel1.ResumeLayout(false);
-      this.groupBox1.ResumeLayout(false);
       this.groupBox2.ResumeLayout(false);
       this.groupBox2.PerformLayout();
+      this.groupBox1.ResumeLayout(false);
       this.ResumeLayout(false);
 
     }
 
     #endregion
-
-    private System.Windows.Forms.ComboBox cbMaSP;
     private System.Windows.Forms.DataGridView dgvExport_goods_goods;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     private System.Windows.Forms.GroupBox groupBox1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn colMaHDXuat;
+    private System.Windows.Forms.DataGridViewTextBoxColumn colMaSP;
+    private System.Windows.Forms.DataGridViewTextBoxColumn colNgayXuat;
+    private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
+    private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
     private System.Windows.Forms.GroupBox groupBox2;
+    private System.Windows.Forms.ComboBox cbMaSP;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Button btnAdd;
     private System.Windows.Forms.DateTimePicker dateNgayXuat;
     private System.Windows.Forms.TextBox txtSoLuong;
-    private System.Windows.Forms.DataGridViewTextBoxColumn colMaHDXuat;
-    private System.Windows.Forms.DataGridViewTextBoxColumn colMaSP;
-    private System.Windows.Forms.DataGridViewTextBoxColumn colNgayXuat;
-    private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
-    private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
   }
 }

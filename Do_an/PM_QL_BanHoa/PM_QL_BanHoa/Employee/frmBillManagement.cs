@@ -86,49 +86,8 @@ namespace PM_QL_BanHoa.Employee {
 			return result > 0;
 		}
 
-		// Thêm hóa đơn mới vào cơ sở dữ liệu.
-		private void btnAddInvoice_Click(object sender, EventArgs e) {
-			try {
-				// Lấy dữ liệu ra từ các TextBox.
-				int staffID = int.Parse(txtStaffID.Text.ToString());
-				int customerID = int.Parse(txtCustomerID.Text.ToString());
-				DateTime dateCreated = dateTimePicker.Value;
-				string status = txtStatus.Text.ToString();
-				string deliveryAddress = txtDeliveryAddress.Text.ToString();
-				double totalPrice = double.Parse(txtTotal.Text.ToString());
-
-				bool success = addInvoice(staffID, customerID, dateCreated, status, deliveryAddress, totalPrice);
-
-				if (success) {
-					MessageBox.Show(
-						"Thêm hóa đơn thành công",
-						"Thông báo",
-						MessageBoxButtons.OK,
-						MessageBoxIcon.Information
-					);
-
-					// Gọi hàm loadInvoiceData() để hiển thị dữ liệu vào sau khi thêm hóa đơn.
-					loadInvoiceData();
-				} else {
-					MessageBox.Show(
-						"Thêm hóa đơn không thành công",
-						"Thông báo",
-						MessageBoxButtons.OK,
-						MessageBoxIcon.Information
-					);
-				}
-			} catch (Exception exception) {
-				MessageBox.Show(
-					$"{exception.Message}",
-					"Cảnh báo",
-					MessageBoxButtons.OK,
-					MessageBoxIcon.Error
-				);
-			}
-		}
-
-		// Hàm dùng để cập nhật thông tin hóa đơn.
-		bool updateInvoice(int staffID, int customerID, DateTime dateTime, string status,
+    // Hàm dùng để cập nhật thông tin hóa đơn.
+    bool updateInvoice(int staffID, int customerID, DateTime dateTime, string status,
 											 string deliveryAddress, double total, int invoiceID) {
 			string queryString =
 					"UPDATE HoaDon " +

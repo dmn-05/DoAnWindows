@@ -33,10 +33,16 @@ namespace PM_QL_BanHoa {
       HoaDon.MaSP = int.Parse(cbMaSP.Text.Trim());
       HoaDon.NgayXuat = DateTime.Parse(dateNgayXuat.Text);
       HoaDon.SoLuong = int.Parse(txtSoLuong.Text);
-      string query = "SELECT GiaXuat FROM SanPham WHERE MaSP = @MaSP";
+      string query = "SELECT GiaXuat, SoLuongTonKho FROM SanPham WHERE MaSP = @MaSP ";
       DataTable SanPham = DataProviderBUS.Instance.ExecuteQuery(query, new object[] { HoaDon.MaSP });
       if (SanPham.Rows.Count == 0) {
         MessageBox.Show("Không tìm thấy sản phẩm!");
+        return;
+      }
+      if (HoaDon.SoLuong > Convert.ToInt32(SanPham.Rows[0]["SoLuongTonKho"])) {
+        MessageBox.Show("So Luong lon hon so luong ton trong kho vui long nhap lai!",
+          "Canh Bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        txtSoLuong.Text = SanPham.Rows[0]["SoLuongTonKho"].ToString();
         return;
       }
       HoaDon.ThanhTien = HoaDon.SoLuong * Convert.ToDouble(SanPham.Rows[0]["GiaXuat"]);
